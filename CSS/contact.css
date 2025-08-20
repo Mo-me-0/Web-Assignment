@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Menbere:wght@100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Menbere", sans-serif;
+}
+*:focus{
+    outline: 2px solid #007bff; /* Blue outline */
+    outline-offset: 2px;
+}
+body{
+    background-color: #2d3748;
+}
+/*The Header Component*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .7rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a202c;
+    z-index: -1;
+}
+.header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 90deg, transparent, 
+    rgba(255,255,255,.4), transparent);
+    transition: .5s;
+}
+.header:hover::after{
+    left: 100%;
+}
+.logo{
+    height: 40px;
+}
+.login-button{
+    background-color: #f2fc24;
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.login-button:hover{
+    background-color: #d2db1e;
+}
+.login-button:active{
+    background-color: #b2b413;
+}
+.navbar a{
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
+.navbar a:hover{
+    text-decoration: underline;
+    color: #f2fc24;
+}
+#check{
+    display: none;
+}
+.icons{
+    left: 5%;
+    color: #fff;
+    font-size: 2.8rem;
+    cursor: pointer;
+    display: none;
+}
+/*Contact Component*/
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    padding: 40px;
+    display: flex;
+    background-color: #1a202c;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255,255,255,.4);
+}
+.heading{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1;
+}
+.text{
+    font-size: 14px;
+    color: #fff;
+    margin-top: 10px;
+}
+.left{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+.right{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Button Info*/
+.button{
+    display: inline-block;
+    text-decoration: none;
+    width: 150px;
+    font-size: 1.1rem;
+    color: #fff;
+    border: 2px solid #f2fc24;
+    border-radius: 10px;
+    padding: 12px 34px;
+    background-color: transparent;
+    position: relative;
+}
+.button:hover{
+    color: #000;
+    background-color: #f2fc24;
+    transition: 1s;
+}
+.button:active{
+    background-color: #b2b413;
+}
+
+
+/*Footer Section*/
+.footer{
+    background-color: #1a202c;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    color: #fff;
+    font-size: small;
+    flex-wrap: wrap;
+    border-top: 1px solid #4a5568;
+}
+.links a{
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: .8rem;
+    color: #fff;
+}
+/*Responsiveness*/
+@media (max-width: 992px){
+    .header{
+        padding: .5rem 5%;
+    }
+}
+@media (max-width: 768px){
+    .icons{
+        display: inline-flex;
+    }
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+    .icons #close-icon{
+        display: none;
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+    /*navigation dropdown*/
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: #1a202c;
+        box-shadow: 0 .5rem 1rem  rgba(0, 0, 0, .3);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+    #check:checked~.navbar{
+        height: 11rem;
+        z-index: 10;
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translatey(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+    #check:checked~.navbar a{
+        transform: translatey(0px);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+    #check:checked~#overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+}

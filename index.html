@@ -1,0 +1,90 @@
+<!Doctype html>
+<html lang="am">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ዜማ</title>
+        <link rel="stylesheet" href="CSS/main.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <!--Navigation Section-->
+        <header class="header">
+            <input type="checkbox" id="check" >
+            <label for="check" class="icons">
+                <i class='bx bx-menu' id="menu-icon"></i>
+                <i class='bx bx-x' id="close-icon"></i>
+            </label>
+            <a class="logo" href="#">
+                <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
+            </a>
+            <label id="overlay" for="check">
+
+            </label>
+            <nav class="navbar">
+                <a href="dashboard.html" style="--i:0">ዋና ገፅ</a>
+                <a href="about.html" style="--i:1">ስለዜማ</a>
+                <a href="contact.html" style="--i:2">አድራሻ</a>
+            </nav>
+            <button class="login-button">ይመዝገቡ</button>
+        </header>
+
+        <!--the main component section-->
+        <main>
+            <!--Hero Section-->
+            <section class="hero-section">
+                <form class="search-bar" method="get">
+                    <input type="text" placeholder="ይፈልጉ" name="q">
+                    <button type="submit"><i class='bx bx-search'></i></button>
+                </form>
+                <p id="text-data">
+                    የሚወዷቸውን እና የመረጧቸውን ሙዚቃዎች በአርቲስት፣ በአልበም ወይም በሙዚቃ ስም ይፈልጉ።
+                </p>
+                <a href="dashboard.html" class="button" id="explore-button">ይጎብኙ ></a>
+            </section>
+            <!--Explanation about the website-->
+            <section class="zema-detail">
+                <h1>"ዜማ" ምንድን ነው?</h1>
+                <p>
+                    ዜማ ተጠቃሚዎች ሙዚቃዎችን እንዲፈልጉ እና እንዲያዳምጡ የሚያስችል ድህረገፅ ነው። ለተጠቃሚዎች ምቹ እና ቀላል በሆነ መንገድ የተለያዩ ሃገራዊ ሙዚቃዎችን ለማግኘት ፈጣን እና ተደራሽ መንገድ ያቀርባል። ተጠቃሚዎች የዘፈኑን ወይም የአርቲስትን ስም በፍለጋ ሳጥን ውስጥ በማስገባት፤ የሚወዷቸውን እና የመረጧቸውን ሙዚቃዎች ማግኘት ይችላሉ።
+                </p>
+            </section>
+            <!--Services Provided-->
+            <section class="services">
+                <h2>የምንሰጣቸው አገልግሎቶች</h2>
+                <div class="row">
+                    <div class="column">
+                        <h4>ሃገራዊ ሙዚቃዎች</h4>
+                        <p>ብዙ የሃገር ውስጥ ሙዚቃዎችን በተለያዩ ዘውጎች ያቀርባል እናም ተጠቃሚዎች ከተለያዩ አርቲስቶች እንዲሁም የጊዜ ወቅት ዘፈኖችን መርጠው ማዳመጥ ይችላሉ።</p>
+                    </div>
+                    <div class="column">
+                        <h4>ጥራት ያለው ሙዚቃ</h4>
+                        <p>ጥሩ የድምፅ ጥራት ያላቸውን ሙዚቃዎችን እናቀርባለን።</p>
+                    </div>
+                    <div class="column">
+                        <h4>ከማስታወቂያ ነፃ</h4>
+                        <p>ያለ ምንም ገደብ እና ረብሻ የሚወዷቸውን ሙዚቃዎች ያዳምጡ፣ ይዝናኑ።</p>
+                    </div>
+                </div>
+            </section>
+            <!--Call to Action-->
+            <section class="cta">
+                <p>
+                    ጥራት ያለው አገልግሎታችን እንድቀጥል ሃሳብ አስተያየቶን በኢ-ሜል ወይም በማህበራዊ ሚዲያ አድራሻችን ያሳውቁን።
+                </p>
+                <a href="contact.html" class="button">አድራሻ</a>
+            </section>
+        </main>
+
+        <!--The Footer Section-->
+        <footer class="footer">
+                <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
+                <div class="links">
+                    <a href="#">የአገልግሎት ውል</a>
+                    <a href="about.html">ስለዜማ</a>
+                    <a href="contact.html">አድራሻ</a>
+                </div>
+                <span>&copy; 2025 Zema Audio Streaming Website</span>
+        </footer>
+    </body>
+</html>

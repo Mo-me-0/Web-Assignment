@@ -1,0 +1,70 @@
+<!Doctype html>
+<html lang="am">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>አድራሻ</title>
+        <link rel="stylesheet" href="CSS/contact.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <!--Navigation Section-->
+        <header class="header">
+            <input type="checkbox" id="check" >
+            <label for="check" class="icons">
+                <i class='bx bx-menu' id="menu-icon"></i>
+                <i class='bx bx-x' id="close-icon"></i>
+            </label>
+            <a class="logo" href="#">
+                <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
+            </a>
+            <label id="overlay" for="check">
+
+            </label>
+            <nav class="navbar">
+                <a href="dashboard.html" style="--i:0">ዋና ገፅ</a>
+                <a href="about.html" style="--i:1">ስለዜማ</a>
+                <a href="contact.html" style="--i:2">አድራሻ</a>
+            </nav>
+            <button class="login-button">ይመዝገቡ</button>
+        </header>
+
+        <!--the main component section-->
+        <main>
+            <section class="container">
+                <section id="left">
+                    <h1 class="heading">አስተያየት</h1>
+                    <div>
+                        <div class="text">ስም፡</div>
+                        <form action="#">
+                            <input type="text" placeholder="ስሞን ይፃፉ" name="ስም" required>
+                        </form>
+                    </div>
+                    <div>
+                        <div class="text">ኢሜል፡</div>
+                        <input type="email" placeholder="ኢሜሎን ያስገቡ" name="ኢሜል" required>
+                    </div>
+                    <div>
+                        <a href="#"><img src="Assets/Images/instagram.svg"></a>
+                        <a href="#"><img src="Assets/Images/x.svg"></a>
+                    </div>
+                </section>
+                <section id="right">
+                    <div class="text">መልዕክት፡</div>
+                    <textarea placeholder="መልዕክቶን ይፃፉ" name="መልዕክት፡" class="message"></textarea>
+                </section>                
+                    <button class="button">ላክ</button>
+            </section>
+        </main>
+        <!--The Footer Section-->
+        <footer class="footer">
+                <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
+                <div class="links">
+                    <a href="#">የአገልግሎት ውል</a>
+                    <a href="about.html">ስለዜማ</a>
+                    <a href="contact.html">አድራሻ</a>
+                </div>
+                <span>&copy; 2025 Zema Audio Streaming Website</span>
+        </footer>
+    </body>
+</html>
