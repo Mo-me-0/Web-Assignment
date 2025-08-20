@@ -300,4 +300,15 @@ body{
     .row{
         flex-direction: column;
     }
+    /*Hero Section*/
+    .search-bar{
+        width: 250px;
+    }
+    .search-bar input{
+        width: 200px;
+    }
+    .hero-section p{
+        width: 250px;
+        font-size: 1.1rem;
+    }
 }
