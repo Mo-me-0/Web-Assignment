@@ -213,7 +213,6 @@ body{
 .element:hover{
     /*background-color: #4a5568;*/
     border: 2px solid #f2fc24;
-
 }
 .element:hover .play-ico .bx{
     opacity: 0.8;

@@ -93,7 +93,8 @@ body{
 /*The Hero Section*/
 .hero-section{
     min-height: 100vh;
-    background-image: url("../Assets/Images/image01.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), 
+    url("../Assets/Images/image01.jpg");
     background-repeat:  no-repeat;
     background-size: cover;
     background-position: center;
@@ -134,10 +135,9 @@ body{
     font-size: 25px;
 }
 .hero-section p{
-    margin: 2% 0;
+    margin: 5% 0;
     color: #fff;
     font-size: 1.5rem;
-    background-color: rgba(0, 0, 0, .7);
     max-width: 450px;
 }
 .button{
@@ -204,7 +204,7 @@ body{
     font-weight: 700;
 }
 .column:hover{
-    box-shadow: 0 0 25px 0 rgba(255, 255, 255, .4);
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, .4);
 }
 /*Call to Action*/
 .cta{
