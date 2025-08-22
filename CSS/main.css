@@ -75,10 +75,11 @@ body{
     text-decoration: none;
     font-weight: 500;
     margin-left: 2.5rem;
+    padding: 8px;
 }
 .navbar a:hover{
-    text-decoration: underline;
-    color: #f2fc24;
+    color: #000;
+    background-color: #f2fc24;
 }
 #check{
     display: none;
@@ -170,9 +171,12 @@ body{
 .zema-detail h1{
     font-size: 2.25rem;
     font-weight: 600;
+    color: #f2fc24;
+    text-align: center;
+    margin-bottom: 30px;
 }
 .zema-detail p{
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 400;
     padding: 10px;
 }
@@ -264,10 +268,11 @@ body{
     /*navigation dropdown*/
     .navbar{
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+        top: 120%;
+        left: 20px;
+        width: 200px;
         height: 0;
+        border-radius: 8px;
         background-color: #1a202c;
         box-shadow: 0 .5rem 1rem  rgba(0, 0, 0, .3);
         overflow: hidden;
@@ -280,7 +285,7 @@ body{
     .navbar a{
         display: block;
         font-size: 1.1rem;
-        margin: 1.5rem 0;
+        margin: .7rem;
         text-align: center;
         transform: translatey(-50px);
         opacity: 0;
@@ -313,5 +318,10 @@ body{
     .hero-section p{
         width: 250px;
         font-size: 1.1rem;
+    }
+    .zema-detail p{
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 10px;
     }
 }

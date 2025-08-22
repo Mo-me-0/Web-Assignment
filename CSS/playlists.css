@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Menbere:wght@100..700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -72,10 +71,11 @@ body{
     text-decoration: none;
     font-weight: 500;
     margin-left: 2.5rem;
+    padding: 8px;
 }
 .navbar a:hover{
-    text-decoration: underline;
-    color: #f2fc24;
+    color: #000;
+    background-color: #f2fc24;
 }
 #check{
     display: none;
@@ -223,10 +223,11 @@ main{
     /*navigation dropdown*/
     .navbar{
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+        top: 120%;
+        left: 20px;
+        width: 200px;
         height: 0;
+        border-radius: 8px;
         background-color: #1a202c;
         box-shadow: 0 .5rem 1rem  rgba(0, 0, 0, .3);
         overflow: hidden;
@@ -239,7 +240,7 @@ main{
     .navbar a{
         display: block;
         font-size: 1.1rem;
-        margin: 1.5rem 0;
+        margin: .7rem;
         text-align: center;
         transform: translatey(-50px);
         opacity: 0;
