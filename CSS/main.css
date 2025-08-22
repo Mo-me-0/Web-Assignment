@@ -184,16 +184,19 @@ body{
 }
 .row{
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 .column{
     flex-basis: 31%;
-    background-color: #faffa4;
+    max-width: 350px;
+    background-color: #1a202c;
     border-radius: 10px;
     margin: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
     transition: 0.5s;
+    color: #fff;
 }
 .column h4{
     text-align: center;

@@ -52,21 +52,18 @@ body{
 .logo{
     height: 40px;
 }
-.login-button{
+.profile-ico {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
     background-color: #f2fc24;
-    width: 80px;
-    height: 30px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
     text-align: center;
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    transition: .5s;
+    text-decoration: none;
+    color: #000;
 }
-.login-button:hover{
-    background-color: #d2db1e;
-}
-.login-button:active{
+.profile-ico:hover{
     background-color: #b2b413;
 }
 .navbar a{
@@ -90,122 +87,168 @@ body{
     cursor: pointer;
     display: none;
 }
-/*The Hero Section*/
-.hero-section{
-    margin-top: 50px;
-    min-height: 100vh;
-    background-repeat:  no-repeat;
-    background-size: cover;
-    background-position: center;
+.search-bar{
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    background-color: black;
+    opacity: .7;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+}
+.search-bar input{
+    background-color: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 10px;
+    color: #fff;
+}
+/*Arrtist Section*/
+.category{
+    padding: 20px 40px;
+}
+.headding-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.scroll a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+}
+.elements{
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+.element{
+    min-width: 140px;
+    width: 160px;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #1a202c;
+    transition: all ease 0.2s;
+}
+.element img{
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.element .play-ico{
+    position: relative;
+}
+.play-ico .bx{
+    background-color: #f2fc24;
+    position: absolute;
+    right: 5px;
+    top: -40px;
+    padding: 18px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    opacity: 0;
+    transition: all ease 0.4s;
+}
+.element .title{
+    color: white;
+}
+.element p{
+    color: white; 
+    font-size: 0.8rem;
+}
+.element:hover{
+    /*background-color: #4a5568;*/
+    border: 2px solid #f2fc24;
+
+}
+.element:hover .play-ico .bx{
+    opacity: 0.8;
+    transform: translateY(-30px);
+}
+/*Playlist Section*/
+.playlist-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 5%;
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("../Assets/Images/image01.jpg");
 }
-.hero-section h1{
-    margin: 2% 0;
-    color: #f2fc24;
-    font-size: 2.5rem;
-}
-.hero-section p{
-    margin: 2% 0;
-    color: #fff;
-    font-size: 1.5rem;
-}
-/*Button Style*/
-.button{
-    display: inline-block;
-    text-decoration: none;
-    width: 150px;
-    font-size: 1.1rem;
-    color: #fff;
-    border: 2px solid #f2fc24;
-    border-radius: 10px;
-    padding: 12px 34px;
-    background-color: transparent;
-    position: relative;
-}
-.button:hover{
-    color: #000;
-    background-color: #f2fc24;
-    transition: 1s;
-}
-.button:active{
-    background-color: #b2b413;
-}
-/*Services section*/
-.services h2{
-    text-align: center;
-    font-weight: 700;
-    color: #fff;
-    margin-top: 20px;
-}
-.row{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.column{
-    flex-basis: 31%;
-    max-width: 350px;
+.top-section{
+    margin-top: 60px;
+    width: 100%;
+    height: 200px;
     background-color: #1a202c;
-    border-radius: 10px;
-    margin: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.top-section img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 25%;
+}
+.top-section .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: #fff;
 }
-.column h4{
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: 700;
+.text h1{
+    margin: 0;
 }
-.column:hover{
-    box-shadow: 0 0 25px 0 rgba(255, 255, 255, .4);
+.text h2{
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.2rem;
 }
-/*Info Container*/
-.container{
+.list-wrapper{
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    transition: all 0.3s;
+}
+.list-wrapper h2{
+    color: #fff;
     margin: 30px 0;
 }
-.image{
-    width: 35%;
-    margin: 30px;
+.playlist{
+    background-color: #1a202c;
+    padding: 10px 20px;
+    width: 100%;
+    border-spacing: 0 5px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
-.text-detail{
-    width: 35%;
-    margin: 30px;
-    margin: 2% 0;
+.playlist .song{
+    text-align: center;
+    text-indent: 0;
+    cursor: pointer;
+}
+.song .img{
+    width: 60px;
+    object-fit: contain;
+    padding: 10px;
+}
+.img img{
+    width: 100%;
+}
+.song td{
     color: #fff;
-    font-size: 1.3rem;
+    font-size: .8rem;
 }
-.text-detail h3{
-    text-align: center;
-    text-align: center;
-    margin-bottom: 30px;
+.song  .heart-ico{
     font-size: 1.5rem;
 }
-/*Call to Action*/
-.cta{
-    margin: 50px 10%;
-    width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("../Assets/Images/image02.avif");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    text-align: center;
-    padding: 100px 0;
-}
-.cta p{
-    color: #fff;
-    margin-bottom: 40px;
-    padding: 0;
+.playlist .song:hover{
+    background-color: #2d3748;
 }
 /*Footer Section*/
 .footer{
@@ -282,16 +325,4 @@ body{
         left: 0;
         z-index: 9;
     }
-    /**/
-    .text-detail h3{
-        font-size: 1.3rem;
-    }
-    .text-detail p{
-        font-size: 1.1rem;
-    }
-    /*Services Section*/
-    .row{
-        flex-direction: column;
-    }
-
 }

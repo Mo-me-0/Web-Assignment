@@ -2,78 +2,158 @@
 <html lang="am">
     <head>
         <meta charset="UTF-8">
-        <title>አርቲስት</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ዜማ</title>
+        <link rel="stylesheet" href="CSS/artist.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
         <!--Navigation Section-->
-        <i class='bx bx-search-alt-2'></i>
-        <header>
-            <nav>
-                <a href="#">
-                    <img src="Assets/Images/zema-icon.png" alt="zema icon">
-                </a>
-                <div class="links">
-                    <a href="dashboard.html">ዋና ገፅ</a>
-                    <a href="about.html">ስለዜማ</a>
-                    <a href="contact.html">አድራሻ</a>
-                </div>
-                <input placeholder="ይፈልጉ">
-                <a>
-                    <img src="Assets/Images/profile.png" alt="profile">
-                </a>
-            </nav>
-        </header>
+        <header class="header">
+            <input type="checkbox" id="check" >
+            <label for="check" class="icons">
+                <i class='bx bx-menu' id="menu-icon"></i>
+                <i class='bx bx-x' id="close-icon"></i>
+            </label>
+            <a class="logo" href="index.html">
+                <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
+            </a>
+            <label id="overlay" for="check">
 
+            </label>
+            <nav class="navbar">
+                <a href="dashboard.html" style="--i:0">ዋና ገፅ</a>
+                <a href="about.html" style="--i:1">ስለዜማ</a>
+                <a href="contact.html" style="--i:2">አድራሻ</a>
+            </nav>
+            <form class="search-bar" method="get">
+                <input type="text" placeholder="ይፈልጉ" name="q">
+            </form>
+            <a class="profile-ico" href="profile.html">
+                <i class='bx bxs-user'></i>
+            </a>
+        </header>
+        
         <!--the main component section-->
         <main>
-            <div>
-                <img src="Assets/Images/image.png">
-                <span>Title</span>
-                <span>Artist Name</span>
-            </div>
-            <div class="container">
-                <!--Section for List of Musics-->
-                <section class="songs">
-                    <h2>Songs</h2>
-                    <div class="song">
-                        <img src="Assets/Images/image.png">
-                        <div class="detail">
-                            <span>Title</span>
-                            <span>Artist Name</span>
-                        </div>
+            <!--Top Heading Section-->
+            <section class="top-section">
+                    <img src="Assets/Images/ቴዲ አፍሮ.jpeg">
+                    <div class="text">
+                        <h1>ጥቁር ሰው</h1>
+                        <h2>ቴዲ አፍሮ</h2>                    
                     </div>
-                    <div class="song">
-                        <img src="Assets/Images/image.png">
-                        <div class="detail">
-                            <span>Title</span>
-                            <span>Artist Name</span>
-                        </div>
+            </section>
+            <!--Albums Section-->
+            <div class="category">
+                <div class="headding-container">
+                    <h2>አልበሞች<h2>
+                    <div class="scroll">
+                        <a href=""><i class='bx bx-chevron-left'></i></a>
+                        <a href=""><i class='bx bx-chevron-right'></i></a>
                     </div>
-                    <div class="song">
-                        <img src="Assets/Images/image.png">
-                        <div class="detail">
-                            <span>Title</span>
-                            <span>Artist Name</span>
+                </div>
+                <div class="elements">
+                    <a href="playlist.html" class="element">
+                        <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg">
+                        <div class="play-ico">
+                            <i class='bx bx-play'></i>
                         </div>
-                    </div>
-                    <div class="song">
-                        <img src="Assets/Images/image.png">
-                        <div class="detail">
-                            <span>Title</span>
-                            <span>Artist Name</span>
-                        </div>
-                    </div>
-                </section>
+                        <h4 class="title">ስም</h4>
+                        <p>በአርቲስት "ስም"</p>
+                    </a>
+                </div>
             </div>
 
+
+            <!--Playlist Section-->
+            <section class="playlist-container">
+                <section class="list-wrapper">
+                    <h2>ሙዚቃዎች</h2>
+                    <table class="playlist">
+                        <tr class="song">
+                            <td class="img">
+                                <img src="Assets/Images/image.png">
+                            </td>
+                            <td class="title">
+                                <h2>ጥቁር ሰው</h2>
+                            </td>
+                            <td class="length">
+                                <h2>0:00</h2>
+                            </td>
+                            <td class="heart-ico">
+                                <i class='bx bx-heart' ></i>
+                            </td>
+                        </tr>
+                        <tr class="song">
+                            <td class="img">
+                                <img src="Assets/Images/image.png">
+                            </td>
+                            <td class="title">
+                                <h2>ጥቁር ሰው</h2>
+                            </td>
+                            <td class="length">
+                                <h2>0:00</h2>
+                            </td>
+                            <td class="heart-ico">
+                                <i class='bx bx-heart' ></i>
+                            </td>
+                        </tr>
+                        <tr class="song">
+                            <td class="img">
+                                <img src="Assets/Images/image.png">
+                            </td>
+                            <td class="title">
+                                <h2>ጥቁር ሰው</h2>
+                            </td>
+                            <td class="length">
+                                <h2>0:00</h2>
+                            </td>
+                            <td class="heart-ico">
+                                <i class='bx bx-heart' ></i>
+                            </td>
+                        </tr>
+                        <tr class="song">
+                            <td class="img">
+                                <img src="Assets/Images/image.png">
+                            </td>
+                            <td class="title">
+                                <h2>ጥቁር ሰው</h2>
+                            </td>
+                            <td class="length">
+                                <h2>0:00</h2>
+                            </td>
+                            <td class="heart-ico">
+                                <i class='bx bx-heart' ></i>
+                            </td>
+                        </tr>
+                        <tr class="song">
+                            <td class="img">
+                                <img src="Assets/Images/image.png">
+                            </td>
+                            <td class="title">
+                                <h2>ጥቁር ሰው</h2>
+                            </td>
+                            <td class="length">
+                                <h2>0:00</h2>
+                            </td>
+                            <td class="heart-ico">
+                                <i class='bx bx-heart' ></i>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
         </main>
 
         <!--The Footer Section-->
-        <footer>
-                <img src="Assets/Images/zema-icon.png" alt="zema icon">
-                <a href="#">የአገልግሎት ውል</a>
-                <a href="#">ስለዜማ</a>
-                <a href="#">አድራሻ</a>
+        <footer class="footer">
+                <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
+                <div class="links">
+                    <a href="#">የአገልግሎት ውል</a>
+                    <a href="about.html">ስለዜማ</a>
+                    <a href="contact.html">አድራሻ</a>
+                </div>
                 <span>&copy; 2025 Zema Audio Streaming Website</span>
         </footer>
     </body>
