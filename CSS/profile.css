@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Menbere:wght@100..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -51,18 +52,21 @@ body{
 .logo{
     height: 40px;
 }
-.profile-ico {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+.login-button{
     background-color: #f2fc24;
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
     text-align: center;
-    font-size: 1.8rem;
-    transition: .5s;
-    text-decoration: none;
-    color: #000;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
-.profile-ico:hover{
+.login-button:hover{
+    background-color: #d2db1e;
+}
+.login-button:active{
     background-color: #b2b413;
 }
 .navbar a{
@@ -87,108 +91,112 @@ body{
     cursor: pointer;
     display: none;
 }
-.search-bar{
-    width: 100%;
-    max-width: 200px;
-    height: 40px;
-    background-color: black;
-    opacity: .7;
-    display: flex;
-    align-items: center;
-    border-radius: 60px;
-}
-.search-bar input{
-    background-color: transparent;
-    flex: 1;
-    border: 0;
-    outline: none;
-    padding: 24px 20px;
-    font-size: 10px;
-    color: #fff;
-}
-/*Playlist Section*/
+/*Profile Component*/
 main{
-    margin-top: 60px;
+    padding: 100px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
-.top-section{
-    width: 100%;
-    height: 200px;
-    background-color: #1a202c;
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
-.top-section img{
-    width: 150px;
-    border-radius: 8px;
-    margin-left: 25%;
-}
-.top-section .text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-}
-.text h1{
-    margin: 0;
-}
-.text h2{
-    margin: 0;
-    font-weight: 400;
-    font-size: 1.2rem;
-}
-.list-wrapper{
+.container{
     position: relative;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    display: flex;
+    background-color: #1a202c;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    align-items: center;
+}
+.heading{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1;
+}
+.text{
+    font-size: 14px;
+    color: #fff;
+    margin-top: 10px;
+}
+#left{
+    width: 50%;
     display: flex;
     flex-direction: column;
-    width: 80%;
-    transition: all 0.3s;
+    gap: 10px;
+    align-items: center;
 }
-.list-wrapper h2{
-    color: #fff;
-    margin: 30px 0;
-}
-.playlist{
-    background-color: #1a202c;
-    padding: 10px 20px;
-    width: 100%;
-    border-spacing: 0 5px;
-    border: 2px solid #fff;
-    border-radius: 20px;
-}
-.playlist .song{
+.profile-ico {
+    width: 90px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin-top: 20px;
+    background-color: #f2fc24;
     text-align: center;
-    text-indent: 0;
-    cursor: pointer;
+    padding-top: 5px;
+    font-size: 3rem;
+    transition: .5s;
+    text-decoration: none;
+    color: #000;
 }
-.song .img{
-    width: 80px;
-    object-fit: contain;
-    padding: 10px;
+.profile-ico:hover{
+    background-color: #b2b413;
 }
-.img img{
-    width: 100%;
+.medias{
+    display: flex;
+    position: absolute;
+    bottom: 45px;
+    gap: 30px;
 }
-.song td{
+.medias .icons{
+    display: flex;
+    font-size: 1.8rem;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: #f2fc24;
+    color: #000;
+}
+#right{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+}
+/*Button Style*/
+.button{
+    display: inline-block;
+    text-decoration: none;
+    width: 100px;
+    font-size: 1rem;
     color: #fff;
-    font-size: .8rem;
+    border: 2px solid #f2fc24;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: transparent;
+    margin-left: 55%;
 }
-.song  .heart-ico{
-    font-size: 1.5rem;
+.button:hover{
+    color: #000;
+    background-color: #f2fc24;
+    transition: 1s;
 }
-.playlist .song:hover{
-    background-color: #2d3748;
+.button:active{
+    background-color: #b2b413;
 }
+
+
 /*Footer Section*/
 .footer{
     background-color: #1a202c;
     display: flex;
     justify-content: space-between;
     padding: 2rem;
-    margin-top: 20px;
     color: #fff;
     font-size: small;
     flex-wrap: wrap;
@@ -200,7 +208,6 @@ main{
     font-size: .8rem;
     color: #fff;
 }
-
 /*Responsiveness*/
 @media (max-width: 992px){
     .header{
@@ -258,5 +265,13 @@ main{
         top: 0;
         left: 0;
         z-index: 9;
+    }
+    /*Main Container Section*/
+    .container{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .button{
+        margin-left: 65%;
     }
 }

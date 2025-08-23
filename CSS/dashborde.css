@@ -187,6 +187,7 @@ body{
 }
 .element img{
     width: 100%;
+    aspect-ratio: 1;
     border-radius: 8px;
     margin-bottom: 10px;
 }
