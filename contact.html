@@ -8,17 +8,16 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-        <!--Navigation Section-->
         <header class="header">
             <input type="checkbox" id="check" >
-            <label for="check" class="icons">
+            <label for="check" class="icons" aria-label="Toggle Navigation">
                 <i class='bx bx-menu' id="menu-icon"></i>
                 <i class='bx bx-x' id="close-icon"></i>
+            <div id="overlay"></div>
             </label>
-            <a class="logo" href="index.html">
+            <a class="logo" href="#" aria-label="ዜማ Home">
                 <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
             </a>
-            <label id="overlay" for="check"><menu></menu></label>
             <nav class="navbar">
                 <a href="dashboard.html" style="--i:0">ዋና ገፅ</a>
                 <a href="about.html" style="--i:1">ስለዜማ</a>
@@ -26,41 +25,38 @@
             </nav>
             <button class="login-button">ይመዝገቡ</button>
         </header>
-
-        <!--the main component section-->
         <main>
             <section class="container">
                 <section id="left">
                     <h1 class="heading">አስተያየት</h1>
-                    <div class="form-wrapper">
-                        <div class="text">ስም፡</div>
-                        <form action="#">
-                            <input type="text" placeholder="ስሞን ይፃፉ" name="ስም" required>
-                        </form>
-                    </div>
-                    <div class="form-wrapper">
-                        <div class="text">ኢሜል፡</div>
-                        <form action="#">
-                            <input type="text" placeholder="ኢሜሎን ይፃፉ" name="ስም" required>
-                        </form>
-                    </div>
-                    <div class="medias">
-                        <a href="#" class="icons">
-                            <i class='bx bxl-instagram' ></i>
-                        </a>
-                        <a href="#" class="icons">
-                            <i class='bx bxl-twitter'></i>
-                        </a>
-                    </div>
+                    <form action="#" method="post">
+                        <div class="form-wrapper">
+                            <label for="name-input" class="text">ስም፡</label>
+                            <input type="text" id="name-input" placeholder="ስሞን ይፃፉ" name="ስም" required>
+                        </div>
+                        <div class="form-wrapper">
+                            <label for="email-input" class="text">ኢሜል፡</label>
+                            <input type="email" id="email-input" placeholder="ኢሜሎን ይፃፉ" name="ኢሜል" required>
+                        </div>
+                        <div class="medias">
+                            <a href="#" class="icons" aria-label="Instagram">
+                                <i class='bx bxl-instagram' ></i>
+                            </a>
+                            <a href="#" class="icons" aria-label="Twitter">
+                                <i class='bx bxl-twitter'></i>
+                            </a>
+                        </div>
+                    </form>
                 </section>
-                <section id="right">
-                    <div class="text">መልዕክት፡</div>
-                    <textarea placeholder="መልዕክቶን ይፃፉ" name="መልዕክት" class="message"></textarea>
-                    <button class="button">ላክ</button>
+                <section>
+                    <form id="right" action="#">
+                        <label for="message-input" class="text">መልዕክት፡</label>
+                        <textarea id="message-input" placeholder="መልዕክቶን ይፃፉ" name="መልዕክት" class="message"></textarea>
+                        <button class="button">ላክ</button>
+                    </form>
                 </section>                
             </section>
         </main>
-        <!--The Footer Section-->
         <footer class="footer">
                 <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
                 <div class="links">

@@ -8,19 +8,16 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-        <!--Navigation Section-->
         <header class="header">
             <input type="checkbox" id="check" >
-            <label for="check" class="icons">
+            <label for="check" class="icons" aria-label="Toggle Navigation">
                 <i class='bx bx-menu' id="menu-icon"></i>
                 <i class='bx bx-x' id="close-icon"></i>
+            <div id="overlay"></div>
             </label>
-            <a class="logo" href="#">
+            <a class="logo" href="#" aria-label="ዜማ Home">
                 <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
             </a>
-            <label id="overlay" for="check">
-
-            </label>
             <nav class="navbar">
                 <a href="dashboard.html" style="--i:0">ዋና ገፅ</a>
                 <a href="about.html" style="--i:1">ስለዜማ</a>
@@ -29,27 +26,24 @@
             <button class="login-button">ይመዝገቡ</button>
         </header>
 
-        <!--the main component section-->
         <main>
-            <!--Hero Section-->
             <section class="hero-section">
-                <form class="search-bar" method="get">
-                    <input type="text" placeholder="ይፈልጉ" name="q">
-                    <button type="submit"><i class='bx bx-search'></i></button>
+                <form class="search-bar" action="search.html" method="get">
+                    <label for="search-input" aria-label="ይፈልጉ"></label>
+                    <input type="text" id="search-input" placeholder="ይፈልጉ" name="searchFor" onchange="search.html">
+                    <button type="submit" aria-label="መፈለግ"><i class='bx bx-search'></i></button>
                 </form>
                 <p id="text-data">
                     የሚወዷቸውን እና የመረጧቸውን ሙዚቃዎች በአርቲስት፣ በአልበም ወይም በሙዚቃ ስም ይፈልጉ።
                 </p>
                 <a href="dashboard.html" class="button" id="explore-button">ይጎብኙ ></a>
             </section>
-            <!--Explanation about the website-->
             <section class="zema-detail">
-                <h1>"ዜማ" ምንድን ነው?</h1>
+                <h2>"ዜማ" ምንድን ነው?</h2>
                 <p>
                     ዜማ ተጠቃሚዎች ሙዚቃዎችን እንዲፈልጉ እና እንዲያዳምጡ የሚያስችል ድህረገፅ ነው። ለተጠቃሚዎች ምቹ እና ቀላል በሆነ መንገድ የተለያዩ ሃገራዊ ሙዚቃዎችን ለማግኘት ፈጣን እና ተደራሽ መንገድ ያቀርባል። ተጠቃሚዎች የዘፈኑን ወይም የአርቲስትን ስም በፍለጋ ሳጥን ውስጥ በማስገባት፤ የሚወዷቸውን እና የመረጧቸውን ሙዚቃዎች ማግኘት ይችላሉ።
                 </p>
             </section>
-            <!--Services Provided-->
             <section class="services">
                 <h2>የምንሰጣቸው አገልግሎቶች</h2>
                 <div class="row">
@@ -67,7 +61,6 @@
                     </div>
                 </div>
             </section>
-            <!--Call to Action-->
             <section class="cta">
                 <p>
                     ጥራት ያለው አገልግሎታችን እንድቀጥል ሃሳብ አስተያየቶን በኢ-ሜል ወይም በማህበራዊ ሚዲያ አድራሻችን ያሳውቁን።
@@ -76,7 +69,6 @@
             </section>
         </main>
 
-        <!--The Footer Section-->
         <footer class="footer">
                 <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
                 <div class="links">

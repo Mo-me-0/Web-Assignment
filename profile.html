@@ -8,24 +8,23 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-        <!--Navigation Section-->
         <header class="header">
-            <input type="checkbox" id="check" >
-            <label for="check" class="icons">
+            <input type="checkbox" id="check">
+            <label for="check" class="icons" aria-label="Toggle Navigation">
                 <i class='bx bx-menu' id="menu-icon"></i>
                 <i class='bx bx-x' id="close-icon"></i>
+                <div id="overlay"></div>
             </label>
-            <a class="logo" href="index.html">
+            <a class="logo" href="index.html" aria-label="ዜማ Home">
                 <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
             </a>
-            <label id="overlay" for="check"><menu></menu></label>
             <nav class="navbar">
                 <a href="dashboard.html" style="--i:0">ዋና ገፅ</a>
                 <a href="about.html" style="--i:1">ስለዜማ</a>
                 <a href="contact.html" style="--i:2">አድራሻ</a>
             </nav>
+            <div></div>
         </header>
-        <!--the main component section-->
         <main>
             <section class="container">
                 <section id="left">
@@ -34,30 +33,25 @@
                         <i class='bx bxs-user'></i>
                     </div>
                 </section>
-                <section id="right">
+                <section>
+                    <form id="right" action="#" method="post">
                         <div>
-                            <div class="text">ስም፡</div>
-                            <form action="#">
-                                <input type="text" placeholder="ኢሜሎን ይፃፉ" name="ስም" required>
-                            </form>
+                            <label for="name-input" class="text">ስም፡</label>
+                            <input type="text" id="name-input" placeholder="ስሞን ይፃፉ" name="name" required>
                         </div>
                         <div>
-                            <div class="text">ኢሜል፡</div>
-                            <form action="#">
-                                <input type="text" placeholder="ኢሜሎን ይፃፉ" name="ስም" required>
-                            </form>
+                            <label for="email" class="text">ኢሜል፡</label>
+                            <input type="email" id="email" placeholder="ኢሜሎን ይፃፉ" name="email" required>
                         </div>
                         <div>
-                        <div class="text">የይለፍ ቃል፡</div>
-                        <form action="#">
-                            <input type="text" placeholder="ኢሜሎን ይፃፉ" name="ስም" required>
-                        </form>
+                            <label for="password" class="text">የይለፍ ቃል፡</label>
+                            <input type="password" id="password" placeholder="ይለፍ ቃሎን ያስገቡ" name="password" maxlength="12" required>
                         </div>
-                    <button class="button">መዝግብ</button>
+                        <input class="button" type="submit" value="መዝግብ">
+                    </form>
                 </section>                
             </section>
         </main>
-        <!--The Footer Section-->
         <footer class="footer">
                 <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
                 <div class="links">

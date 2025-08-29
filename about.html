@@ -8,18 +8,16 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-        <!--Navigation Section-->
         <header class="header">
             <input type="checkbox" id="check" >
-            <label for="check" class="icons">
+            <label for="check" class="icons" aria-label="Toggle Navigation">
                 <i class='bx bx-menu' id="menu-icon"></i>
                 <i class='bx bx-x' id="close-icon"></i>
+            <div id="overlay"></div>
             </label>
-            <a class="logo" href="index.html">
+            <a class="logo" href="index.html" aria-label="ዜማ Home">
                 <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
             </a>
-            <label id="overlay" for="check">
-            </label>
             <nav class="navbar">
                 <a href="dashboard.html" style="--i:0">ዋና ገፅ</a>
                 <a href="about.html" style="--i:1">ስለዜማ</a>
@@ -28,52 +26,47 @@
             <button class="login-button">ይመዝገቡ</button>
         </header>
         <main>
-            <!--Explanation about the website-->
             <section class="hero-section">
                 <h1>"ዜማ" ምንድን ነው?</h1>
                 <p>
                     ዜማ ተጠቃሚዎች ሙዚቃዎችን እንዲፈልጉ እና እንዲያዳምጡ የሚያስችል ድህረገፅ ነው። ለተጠቃሚዎች ምቹ እና ቀላል በሆነ መንገድ የተለያዩ ሃገራዊ ሙዚቃዎችን ለማግኘት ፈጣን እና ተደራሽ መንገድ ያቀርባል። ተጠቃሚዎች የዘፈኑን ወይም የአርቲስትን ስም በፍለጋ ሳጥን ውስጥ በማስገባት፤ የሚወዷቸውን እና የመረጧቸውን ሙዚቃዎች ማግኘት ይችላሉ።
                 </p>
             </section>
-            <!--Services Provided-->
             <section class="services">
                 <h2>የምንሰጣቸው አገልግሎቶች</h2>
                 <div class="row">
                     <div class="column">
-                        <h4>ሃገራዊ ሙዚቃዎች</h4>
+                        <h3>ሃገራዊ ሙዚቃዎች</h3>
                         <p>ብዙ የሃገር ውስጥ ሙዚቃዎችን በተለያዩ ዘውጎች ያቀርባል እናም ተጠቃሚዎች ከተለያዩ አርቲስቶች እንዲሁም የጊዜ ወቅት ዘፈኖችን መርጠው ማዳመጥ ይችላሉ።</p>
                     </div>
                     <div class="column">
-                        <h4>ጥራት ያለው ሙዚቃ</h4>
+                        <h3>ጥራት ያለው ሙዚቃ</h3>
                         <p>ጥሩ የድምፅ ጥራት ያላቸውን ሙዚቃዎችን እናቀርባለን።</p>
                     </div>
                     <div class="column">
-                        <h4>ከማስታወቂያ ነፃ</h4>
+                        <h3>ከማስታወቂያ ነፃ</h3>
                         <p>ያለ ምንም ገደብ እና ረብሻ የሚወዷቸውን ሙዚቃዎች ያዳምጡ፣ ይዝናኑ።</p>
                     </div>
                 </div>
             </section>
-            <!--Music for Any Time-->
             <section class="container">
                 <div class="text-detail">
-                    <h3>ለማንኛውም ጊዜ የሚሆኑ</h3>
+                    <h2>ለማንኛውም ጊዜ የሚሆኑ</h2>
                     <p>
                         ለማንኛውም ወቅት የሚሆኑ ሰፊ የሙዚቃ ስብስቦችን ማግኘት ይችላሉ።
                     </p>
                 </div>
                 <img class="image" src="Assets/Images/images03.jpeg" alt="እስክስታ">
             </section>
-            <!--Enjoy your Favorite Songs-->
             <section class="container">
                 <img class="image" src="Assets/Images/images.jpeg" alt="የሙዚቃ ባንድ">
                 <div class="text-detail">
-                    <h3>የሚወዷቸውን ዘፈኖች ይደሰቱ</h3>
+                    <h2>የሚወዷቸውን ዘፈኖች ይደሰቱ</h2>
                     <p>
                         ለማንኛውም ወቅት የሚሆኑ ሰፊ የሙዚቃ ስብስቦችን ማግኘት ይችላሉ።
                     </p>
                 </div>
             </section>
-            <!--Call to Action-->
             <section class="cta">
                 <p>
                     ጥራት ያለው አገልግሎታችን እንድቀጥል ሃሳብ አስተያየቶን በኢ-ሜል ወይም በማህበራዊ ሚዲያ አድራሻችን ያሳውቁን።
@@ -81,7 +74,6 @@
                 <a href="contact.html" class="button">አድራሻ</a>
             </section>
         </main>
-        <!--The Footer Section-->
         <footer class="footer">
                 <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
                 <div class="links">

@@ -152,7 +152,7 @@ main{
 #right{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin: 20px;
     gap: 20px;
 }
 #right textarea{
@@ -249,7 +249,7 @@ main{
         opacity: 1;
         transition-delay: calc(.15s * var(--i));
     }
-    #check:checked~#overlay{
+    #check:checked~.icons #overlay{
         height: 100%;
         width: 100%;
         position: fixed;

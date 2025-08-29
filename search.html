@@ -1,0 +1,211 @@
+<!Doctype html>
+<html lang="am">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ዜማ</title>
+        <link rel="stylesheet" href="CSS/search.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <header class="header">
+            <input type="checkbox" id="check" >
+            <label for="check" class="icons" aria-label="Toggle Navigation">
+                <i class='bx bx-menu' id="menu-icon"></i>
+                <i class='bx bx-x' id="close-icon"></i>
+            <div id="overlay"></div>
+            </label>
+            <a class="logo" href="#" aria-label="ዜማ Home">
+                <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
+            </a>
+            <nav class="navbar">
+                <a href="dashboard.html" style="--i:0">ዋና ገፅ</a>
+                <a href="about.html" style="--i:1">ስለዜማ</a>
+                <a href="contact.html" style="--i:2">አድራሻ</a>
+            </nav>
+            <button class="login-button">ይመዝገቡ</button>
+        </header>
+
+        <main>
+            <form class="search-bar" action="search.html" method="get">
+                    <label for="search-input" aria-label="ይፈልጉ"></label>
+                    <input type="text" id="search-input" placeholder="ይፈልጉ" name="searchFor" onchange="search.html">
+                    <button type="submit" aria-label="መፈለግ"><i class='bx bx-search'></i></button>
+            </form>
+            <div class="category">
+                <div class="headding-container">
+                    <h2>አርቲስቶች</h2>
+                    <div class="scroll">
+                        <a href="#" aria-label="Previous Music"><i class='bx bx-chevron-left'></i></a>
+                        <a href="#" aria-label="Next Music"><i class='bx bx-chevron-right'></i></a>
+                    </div>
+                </div>
+                <div class="elements">
+                    <a href="artist.html" class="artist-element">
+                        <img src="Assets/Images/ቴዲ አፍሮ.jpeg" alt="ቴዲ አፍሮ">
+                        <h3 class="title">ቴዲ አፍሮ</h3>
+                    </a>
+                    <a href="artist.html" class="artist-element">
+                        <img src="Assets/Images/ቴዲ አፍሮ.jpeg" alt="ቴዲ አፍሮ">
+                        <h3 class="title">ቴዲ አፍሮ</h3>
+                    </a>
+                    <a href="artist.html" class="artist-element">
+                        <img src="Assets/Images/ቴዲ አፍሮ.jpeg" alt="ቴዲ አፍሮ">
+                        <h3 class="title">ቴዲ አፍሮ</h3>
+                    </a>
+                </div>
+            </div>
+
+
+            <section class="list-wrapper">
+                <h2>ሙዚቃዎች</h2>
+                <table class="playlist" role="presentation">
+                    <tr class="song">
+                        <td class="img">
+                            <img src="Assets/Images/ጥቁር ሰው.jpg" alt="ጥቁር ሰው ሙዚቃ">
+                        </td>
+                        <td class="title">
+                            <h3>ጥቁር ሰው</h3>
+                        </td>
+                        <td class="length">
+                            <h3>9:00</h3>
+                        </td>
+                        <td class="heart-ico">
+                            <i class='bx bx-heart' aria-label="Add to favorites"></i>
+                        </td>
+                    </tr>
+                    <tr class="song">
+                        <td class="img">
+                            <img src="Assets/Images/ጥቁር ሰው.jpg" alt="ጥቁር ሰው ሙዚቃ">
+                        </td>
+                        <td class="title">
+                            <h3>ጥቁር ሰው</h3>
+                        </td>
+                        <td class="length">
+                            <h3>9:00</h3>
+                        </td>
+                        <td class="heart-ico">
+                            <i class='bx bx-heart' aria-label="Add to favorites"></i>
+                        </td>
+                    </tr>
+                    <tr class="song">
+                        <td class="img">
+                            <img src="Assets/Images/ጥቁር ሰው.jpg" alt="ጥቁር ሰው ሙዚቃ">
+                        </td>
+                        <td class="title">
+                            <h3>ጥቁር ሰው</h3>
+                        </td>
+                        <td class="length">
+                            <h3>9:00</h3>
+                        </td>
+                        <td class="heart-ico">
+                            <i class='bx bx-heart' aria-label="Add to favorites"></i>
+                        </td>
+                    </tr>
+                    <tr class="song">
+                        <td class="img">
+                            <img src="Assets/Images/ጥቁር ሰው.jpg" alt="ጥቁር ሰው ሙዚቃ">
+                        </td>
+                        <td class="title">
+                            <h3>ጥቁር ሰው</h3>
+                        </td>
+                        <td class="length">
+                            <h3>9:00</h3>
+                        </td>
+                        <td class="heart-ico">
+                            <i class='bx bx-heart' aria-label="Add to favorites"></i>
+                        </td>
+                    </tr>
+                    <tr class="song">
+                        <td class="img">
+                            <img src="Assets/Images/ጥቁር ሰው.jpg" alt="ጥቁር ሰው ሙዚቃ">
+                        </td>
+                        <td class="title">
+                            <h3>ጥቁር ሰው</h3>
+                        </td>
+                        <td class="length">
+                            <h3>9:00</h3>
+                        </td>
+                        <td class="heart-ico">
+                            <i class='bx bx-heart' aria-label="Add to favorites"></i>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            </div>
+            <div class="category">
+                <div class="headding-container">
+                    <h2>አልበሞች</h2>
+                    <div class="scroll">
+                        <a href="#" aria-label="Previous Album"><i class='bx bx-chevron-left'></i></a>
+                        <a href="#" aria-label="Next Album"><i class='bx bx-chevron-right'></i></a>
+                    </div>
+                </div>
+                <div class="elements">
+                    <a href="playlist.html" class="element">
+                        <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልበም ጥቁር ሰው">
+                        <div class="play-ico">
+                            <i class='bx bx-play'></i>
+                        </div>
+                        <h3 class="title">ጥቁር ሰው</h3>
+                        <p>ቴዲ አፍሮ</p>
+                    </a>
+                    <a href="playlist.html" class="element">
+                        <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልበም ጥቁር ሰው">
+                        <div class="play-ico">
+                            <i class='bx bx-play'></i>
+                        </div>
+                        <h3 class="title">ጥቁር ሰው</h3>
+                        <p>ቴዲ አፍሮ</p>
+                    </a>
+                    <a href="playlist.html" class="element">
+                        <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልበም ጥቁር ሰው">
+                        <div class="play-ico">
+                            <i class='bx bx-play'></i>
+                        </div>
+                        <h3 class="title">ጥቁር ሰው</h3>
+                        <p>ቴዲ አፍሮ</p>
+                    </a>
+                    <a href="playlist.html" class="element">
+                        <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልበም ጥቁር ሰው">
+                        <div class="play-ico">
+                            <i class='bx bx-play'></i>
+                        </div>
+                        <h3 class="title">ጥቁር ሰው</h3>
+                        <p>ቴዲ አፍሮ</p>
+                    </a>
+                    <a href="playlist.html" class="element">
+                        <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልበም ጥቁር ሰው">
+                        <div class="play-ico">
+                            <i class='bx bx-play'></i>
+                        </div>
+                        <h3 class="title">ጥቁር ሰው</h3>
+                        <p>ቴዲ አፍሮ</p>
+                    </a>
+                    <a href="playlist.html" class="element">
+                        <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልበም ጥቁር ሰው">
+                        <div class="play-ico">
+                            <i class='bx bx-play'></i>
+                        </div>
+                        <h3 class="title">ጥቁር ሰው</h3>
+                        <p>ቴዲ አፍሮ</p>
+                    </a>
+                </div>
+            </div>
+
+
+
+        </main>
+
+        <footer class="footer">
+                <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
+                <div class="links">
+                    <a href="#">የአገልግሎት ውል</a>
+                    <a href="about.html">ስለዜማ</a>
+                    <a href="contact.html">አድራሻ</a>
+                </div>
+                <span>&copy; 2025 Zema Audio Streaming Website</span>
+        </footer>
+    </body>
+</html>

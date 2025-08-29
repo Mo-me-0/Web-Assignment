@@ -8,35 +8,30 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-        <!--Navigation Section-->
         <header class="header">
             <input type="checkbox" id="check" >
-            <label for="check" class="icons">
+            <label for="check" class="icons" aria-label="Toggle Navigation">
                 <i class='bx bx-menu' id="menu-icon"></i>
                 <i class='bx bx-x' id="close-icon"></i>
+            <div id="overlay"></div>
             </label>
-            <a class="logo" href="index.html">
+            <a class="logo" href="index.html" aria-label="ዜማ Home">
                 <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
             </a>
-            <label id="overlay" for="check">
-
-            </label>
             <nav class="navbar">
                 <a href="dashboard.html" style="--i:0">ዋና ገፅ</a>
                 <a href="about.html" style="--i:1">ስለዜማ</a>
                 <a href="contact.html" style="--i:2">አድራሻ</a>
             </nav>
-            <form class="search-bar" method="get">
-                <input type="text" placeholder="ይፈልጉ" name="ፍለጋ">
+            <form class="search-bar" action="search.html" method="get">
+                <label for="search-input" aria-label="ይፈልጉ"></label>
+                <input type="text" id="search-input" placeholder="ይፈልጉ" name="ፍለጋ">
             </form>
-            <a class="profile-ico" href="profile.html">
+            <a class="profile-ico" href="profile.html" aria-label="መገለጫ">
                 <i class='bx bxs-user'></i>
             </a>
         </header>
-
-        <!--the main component section-->
         <main>
-            <!--Carousel of Music Images--> 
             <section class="carousel">
                 <div class="carousel-container">
                     <div class="carousel-item">
@@ -47,23 +42,21 @@
                         <img id="img5" src="Assets/Images/ያሬድ ነጉ-አዲመራ.jpeg" alt="ያሬድ ነጉ-አዲመራ">
                     </div>
                     <div class="carousel-nav">
-                        <a href="#img1"></a>
-                        <a href="#img2"></a>
-                        <a href="#img3"></a>
-                        <a href="#img4"></a>
-                        <a href="#img5"></a>
+                        <a href="#img1" aria-label="ምስል 1"></a>
+                        <a href="#img2" aria-label="ምስል 2"></a>
+                        <a href="#img3" aria-label="ምስል 3"></a>
+                        <a href="#img4" aria-label="ምስል 4"></a>
+                        <a href="#img5" aria-label="ምስል 5"></a>
                     </div>
                 </div>
             </section>
-            <!--Category Lists-->
             <section class="container">
-                <!--Category for Musics-->
                 <div class="category">
                     <div class="headding-container">
-                        <h2>ሙዚቃዎች<h2>
+                        <h2>ሙዚቃዎች</h2>
                         <div class="scroll">
-                            <a href="#"><i class='bx bx-chevron-left'></i></a>
-                            <a href="#"><i class='bx bx-chevron-right'></i></a>
+                            <a href="#" aria-label="Previous Music"><i class='bx bx-chevron-left'></i></a>
+                            <a href="#" aria-label="Next Music"><i class='bx bx-chevron-right'></i></a>
                         </div>
                     </div>
                     <div class="elements">
@@ -72,7 +65,7 @@
                             <div class="play-ico">
                                 <i class='bx bx-play'></i>
                             </div>
-                            <h4 class="title">ጥቁር ሰው</h4>
+                            <h3 class="title">ጥቁር ሰው</h3>
                             <p>ቴዲ አፍሮ</p>
                         </a>
                         <a href="playlist.html" class="element">
@@ -80,7 +73,7 @@
                             <div class="play-ico">
                                 <i class='bx bx-play'></i>
                             </div>
-                            <h4 class="title">ጥቁር ሰው</h4>
+                            <h3 class="title">ጥቁር ሰው</h3>
                             <p>ቴዲ አፍሮ</p>
                         </a>
                         <a href="playlist.html" class="element">
@@ -88,7 +81,7 @@
                             <div class="play-ico">
                                 <i class='bx bx-play'></i>
                             </div>
-                            <h4 class="title">ጥቁር ሰው</h4>
+                            <h3 class="title">ጥቁር ሰው</h3>
                             <p>ቴዲ አፍሮ</p>
                         </a>
                         <a href="playlist.html" class="element">
@@ -96,43 +89,26 @@
                             <div class="play-ico">
                                 <i class='bx bx-play'></i>
                             </div>
-                            <h4 class="title">ጥቁር ሰው</h4>
+                            <h3 class="title">ጥቁር ሰው</h3>
                             <p>ቴዲ አፍሮ</p>
                         </a>
                     </div>
                 </div>
-                <!--Category for Albums-->
                 <div class="category">
                     <div class="headding-container">
-                        <h2>አልበሞች<h2>
+                        <h2>አልበሞች</h2>
                         <div class="scroll">
-                            <a href="#"><i class='bx bx-chevron-left'></i></a>
-                            <a href="#"><i class='bx bx-chevron-right'></i></a>
+                            <a href="#" aria-label="Previous Album"><i class='bx bx-chevron-left'></i></a>
+                            <a href="#" aria-label="Next Album"><i class='bx bx-chevron-right'></i></a>
                         </div>
                     </div>
                     <div class="elements">
                         <a href="playlist.html" class="element">
-                            <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልንም ጥቁር ሰው">
+                            <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልበም ጥቁር ሰው">
                             <div class="play-ico">
                                 <i class='bx bx-play'></i>
                             </div>
-                            <h4 class="title">ጥቁር ሰው</h4>
-                            <p>ቴዲ አፍሮ</p>
-                        </a>
-                        <a href="playlist.html" class="element">
-                            <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልንም ጥቁር ሰው">
-                            <div class="play-ico">
-                                <i class='bx bx-play'></i>
-                            </div>
-                            <h4 class="title">ጥቁር ሰው</h4>
-                            <p>ቴዲ አፍሮ</p>
-                        </a>
-                        <a href="playlist.html" class="element">
-                            <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልንም ጥቁር ሰው">
-                            <div class="play-ico">
-                                <i class='bx bx-play'></i>
-                            </div>
-                            <h4 class="title">ጥቁር ሰው</h4>
+                            <h3 class="title">ጥቁር ሰው</h3>
                             <p>ቴዲ አፍሮ</p>
                         </a>
                         <a href="playlist.html" class="element">
@@ -140,7 +116,7 @@
                             <div class="play-ico">
                                 <i class='bx bx-play'></i>
                             </div>
-                            <h4 class="title">ጥቁር ሰው</h4>
+                            <h3 class="title">ጥቁር ሰው</h3>
                             <p>ቴዲ አፍሮ</p>
                         </a>
                         <a href="playlist.html" class="element">
@@ -148,7 +124,7 @@
                             <div class="play-ico">
                                 <i class='bx bx-play'></i>
                             </div>
-                            <h4 class="title">ጥቁር ሰው</h4>
+                            <h3 class="title">ጥቁር ሰው</h3>
                             <p>ቴዲ አፍሮ</p>
                         </a>
                         <a href="playlist.html" class="element">
@@ -156,40 +132,54 @@
                             <div class="play-ico">
                                 <i class='bx bx-play'></i>
                             </div>
-                            <h4 class="title">ጥቁር ሰው</h4>
+                            <h3 class="title">ጥቁር ሰው</h3>
+                            <p>ቴዲ አፍሮ</p>
+                        </a>
+                        <a href="playlist.html" class="element">
+                            <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልበም ጥቁር ሰው">
+                            <div class="play-ico">
+                                <i class='bx bx-play'></i>
+                            </div>
+                            <h3 class="title">ጥቁር ሰው</h3>
+                            <p>ቴዲ አፍሮ</p>
+                        </a>
+                        <a href="playlist.html" class="element">
+                            <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልበም ጥቁር ሰው">
+                            <div class="play-ico">
+                                <i class='bx bx-play'></i>
+                            </div>
+                            <h3 class="title">ጥቁር ሰው</h3>
                             <p>ቴዲ አፍሮ</p>
                         </a>
                     </div>
                 </div>
 
-                <!--Category for Musics-->
                 <div class="category">
                     <div class="headding-container">
-                        <h2>ሙዚቃዎች<h2>
+                        <h2>አርቲስቶች</h2>
                         <div class="scroll">
-                            <a href="#"><i class='bx bx-chevron-left'></i></a>
-                            <a href="#"><i class='bx bx-chevron-right'></i></a>
+                            <a href="#" aria-label="Previous Music"><i class='bx bx-chevron-left'></i></a>
+                            <a href="#" aria-label="Next Music"><i class='bx bx-chevron-right'></i></a>
                         </div>
                     </div>
                     <div class="elements">
                         <a href="artist.html" class="artist-element">
                             <img src="Assets/Images/ቴዲ አፍሮ.jpeg" alt="ቴዲ አፍሮ">
-                            <h4 class="title">ቴዲ አፍሮ</h4>
+                            <h3 class="title">ቴዲ አፍሮ</h3>
                         </a>
                         <a href="artist.html" class="artist-element">
                             <img src="Assets/Images/ቴዲ አፍሮ.jpeg" alt="ቴዲ አፍሮ">
-                            <h4 class="title">ቴዲ አፍሮ</h4>
+                            <h3 class="title">ቴዲ አፍሮ</h3>
                         </a>
                         <a href="artist.html" class="artist-element">
                             <img src="Assets/Images/ቴዲ አፍሮ.jpeg" alt="ቴዲ አፍሮ">
-                            <h4 class="title">ቴዲ አፍሮ</h4>
+                            <h3 class="title">ቴዲ አፍሮ</h3>
                         </a>
                     </div>
                 </div>
             </section>
         </main>
 
-        <!--The Footer Section-->
         <footer class="footer">
                 <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
                 <div class="links">
