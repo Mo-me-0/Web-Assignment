@@ -242,8 +242,9 @@ body{
 .artist-element:hover{
     /*background-color: #4a5568;*/
     border: 2px solid #f2fc24;
-
 }
+/*Music Player*/
+
 /*Footer Section*/
 .footer{
     background-color: #1a202c;

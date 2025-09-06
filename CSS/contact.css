@@ -125,16 +125,21 @@ main{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-right: 20px;
 }
 .form-wrapper{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+.form-wrapper #name-input, #email-input{
+    padding: 5px;
+    border-radius: 8px;
+}
 .medias{
     display: flex;
     position: absolute;
-    bottom: 45px;
+    bottom: 30px;
     gap: 30px;
 }
 .medias .icons{
@@ -152,12 +157,13 @@ main{
 #right{
     display: flex;
     flex-direction: column;
-    margin: 20px;
     gap: 20px;
 }
 #right textarea{
     resize: none;
     height: 130px;
+    border-radius: 8px;
+    padding: 5px;
 }
 /*Button Style*/
 .button{
@@ -257,12 +263,18 @@ main{
         left: 0;
         z-index: 9;
     }
-    /*Main Container Section*/
+    /*Contact Section*/
     .container{
         flex-direction: column;
         justify-content: center;
     }
     .button{
         margin-left: 65%;
+    }
+    #left{
+        width: 100%;
+    }
+    .medias{
+        bottom: 45px;
     }
 }
