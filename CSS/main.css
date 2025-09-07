@@ -7,7 +7,7 @@
     font-family: "Menbere", sans-serif;
 }
 *:focus{
-    outline: 2px solid #007bff; /* Blue outline */
+    outline: 2px solid #007bff;
     outline-offset: 2px;
 }
 body{
@@ -54,6 +54,8 @@ body{
 }
 .login-button{
     background-color: #f2fc24;
+    text-decoration: none;
+    color: #000;
     width: 80px;
     height: 30px;
     border: none;
@@ -141,6 +143,7 @@ body{
     font-size: 1.5rem;
     max-width: 450px;
 }
+/*Button Style*/
 .button{
     display: inline-block;
     text-decoration: none;
@@ -213,7 +216,6 @@ body{
 /*Call to Action*/
 .cta{
     margin: 50px 10%;
-    background-color: red;
     width: 80%;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("../Assets/Images/image02.avif");
     background-repeat: no-repeat;

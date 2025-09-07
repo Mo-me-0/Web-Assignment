@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>አድራሻ</title>
+        <title>መገለጫ</title>
         <link rel="stylesheet" href="CSS/profile.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
@@ -23,8 +23,9 @@
                 <a href="about.html" style="--i:1">ስለዜማ</a>
                 <a href="contact.html" style="--i:2">አድራሻ</a>
             </nav>
-            <div></div>
+            <button class="logout-button">ውጣ</button>
         </header>
+
         <main>
             <section class="container">
                 <section id="left">
@@ -32,34 +33,114 @@
                     <div class="profile-ico" href="profile.html">
                         <i class='bx bxs-user'></i>
                     </div>
+                    <div class="profile-details">
+                        <p class="text">ስም: <span id="display-name"></span></p>
+                        <p class="text">ኢሜል: <span id="display-email"></span></p>
+                    </div>
                 </section>
                 <section>
-                    <form id="right" action="#" method="post">
+                    <form id="right">
+                        <h2 class="heading">መረጃ ቀይር</h2>
+                        <p class="message" id="update-message"></p>
                         <div>
-                            <label for="name-input" class="text">ስም፡</label>
+                            <label for="name-input" class="text">ስም:</label>
                             <input type="text" id="name-input" placeholder="ስሞን ይፃፉ" name="name" required>
                         </div>
                         <div>
-                            <label for="email" class="text">ኢሜል፡</label>
-                            <input type="email" id="email" placeholder="ኢሜሎን ይፃፉ" name="email" required>
+                            <label for="email-input" class="text">ኢሜል:</label>
+                            <input type="email" id="email-input" placeholder="ኢሜሎን ይፃፉ" name="email" required>
                         </div>
                         <div>
-                            <label for="password" class="text">የይለፍ ቃል፡</label>
-                            <input type="password" id="password" placeholder="ይለፍ ቃሎን ያስገቡ" name="password" maxlength="12" required>
+                            <label for="password-input" class="text">የይለፍ ቃል:</label>
+                            <input type="password" id="password-input" placeholder="ይለፍ ቃሎን ያስገቡ" maxlength="12">
                         </div>
-                        <input class="button" type="submit" value="መዝግብ">
+                        <button class="button" type="submit">አዘምን</button>
                     </form>
                 </section>                
             </section>
         </main>
+        
         <footer class="footer">
-                <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
-                <div class="links">
-                    <a href="#">የአገልግሎት ውል</a>
-                    <a href="about.html">ስለዜማ</a>
-                    <a href="contact.html">አድራሻ</a>
-                </div>
-                <span>&copy; 2025 Zema Audio Streaming Website</span>
+            <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
+            <div class="links">
+                <a href="#">የአገልግሎት ውል</a>
+                <a href="about.html">ስለዜማ</a>
+                <a href="contact.html">አድራሻ</a>
+            </div>
+            <span>&copy; 2025 Zema Audio Streaming Website</span>
         </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const displayName = document.getElementById('display-name');
+                const displayEmail = document.getElementById('display-email');
+                const nameInput = document.getElementById('name-input');
+                const emailInput = document.getElementById('email-input');
+                const passwordInput = document.getElementById('password-input');
+                const updateForm = document.getElementById('right');
+                const updateMessage = document.getElementById('update-message');
+                const logoutButton = document.querySelector('.logout-button');
+
+                const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+                if (!currentUser) {
+                    window.location.href = 'login.html'; // Redirect to login page if not logged in
+                } else {
+                    displayName.innerText = currentUser.name;
+                    displayEmail.innerText = currentUser.email;
+                    nameInput.value = currentUser.name;
+                    emailInput.value = currentUser.email;
+                }
+
+                updateForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    const newName = nameInput.value;
+                    const newEmail = emailInput.value;
+                    const newPassword = passwordInput.value;
+
+                    let users = JSON.parse(localStorage.getItem('users')) || [];
+                    const userIndex = users.findIndex(user => user.email === currentUser.email);
+
+                    if (userIndex !== -1) {
+                        const updatedUser = { ...users[userIndex] };
+                        if (newName) updatedUser.name = newName;
+                        if (newEmail) {
+                            // Check if the new email already exists (for another user)
+                            const emailExists = users.some((user, index) => user.email === newEmail && index !== userIndex);
+                            if (emailExists) {
+                                updateMessage.innerText = "ይህ ኢሜል ቀድሞውኑ አለ።";
+                                updateMessage.style.color = '#e53e3e';
+                                return;
+                            }
+                            updatedUser.email = newEmail;
+                        }
+                        if (newPassword && newPassword.length >= 6) {
+                            updatedUser.password = newPassword;
+                        } else if (newPassword && newPassword.length < 6) {
+                            updateMessage.innerText = "የይለፍ ቃል ቢያንስ 6 ፊደላት መሆን አለበት።";
+                            updateMessage.style.color = '#e53e3e';
+                            return;
+                        }
+
+                        users[userIndex] = updatedUser;
+                        localStorage.setItem('users', JSON.stringify(users));
+                        localStorage.setItem('currentUser', JSON.stringify(updatedUser));
+                        updateMessage.innerText = "መረጃዎ በተሳካ ሁኔታ ተዘምኗል።";
+                        updateMessage.style.color = '#48bb78';
+
+                        // Update the displayed information
+                        displayName.innerText = updatedUser.name;
+                        displayEmail.innerText = updatedUser.email;
+                        passwordInput.value = ''; // Clear password field for security
+                    }
+                });
+
+                logoutButton.addEventListener('click', () => {
+                    localStorage.removeItem('currentUser');
+                    window.location.href = 'login.html';
+                });
+            });
+        </script>
     </body>
 </html>

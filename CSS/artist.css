@@ -52,6 +52,7 @@ body{
 .logo{
     height: 40px;
 }
+/*Profile*/
 .profile-ico {
     width: 45px;
     height: 45px;
@@ -66,6 +67,7 @@ body{
 .profile-ico:hover{
     background-color: #b2b413;
 }
+/*Navigation Bar*/
 .navbar a{
     font-size: 1.15rem;
     color: #fff;

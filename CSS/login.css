@@ -53,7 +53,7 @@ body {
 .logo{
     height: 40px;
 }
-.logout-button{
+.login-button{
     background-color: #f2fc24;
     width: 80px;
     height: 30px;
@@ -64,10 +64,10 @@ body {
     font-size: 1.1rem;
     font-weight: 700;
 }
-.logout-button:hover{
+.login-button:hover{
     background-color: #d2db1e;
 }
-.logout-button:active{
+.login-button:active{
     background-color: #b2b413;
 }
 .navbar a{
@@ -92,73 +92,40 @@ body {
     cursor: pointer;
     display: none;
 }
+
 /*Main Container*/
-main{
-    padding: 100px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 .container {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    padding: 40px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #2d3748;
+}
+
+/*Form Style*/
+form {
     background-color: #1a202c;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,.4);
-    align-items: center;
-}
-
-/*Left Section*/
-#left {
     padding: 40px;
     border-radius: 15px;
-    width: 100%;
-    max-width: 300px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.heading {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #fff;
-}
-.profile-details p {
-    font-size: 1.1rem;
-    margin: 15px;
-}
-.profile-ico {
-    width: 90px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    margin-top: 20px;
-    background-color: #f2fc24;
-    text-align: center;
-    padding-top: 5px;
-    font-size: 3rem;
-    transition: .5s;
-    text-decoration: none;
-    color: #000;
-}
-/*Right Section*/
-#right {
-
-    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 400px;
+    color: #fff;
+}
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
     color: #fff;
 }
 .message {
     text-align: center;
     margin-bottom: 15px;
-    font-weight: bold;
+    color: #48bb78; /* Green for success */
 }
-#right div {
+form div {
     margin-bottom: 20px;
 }
 .text {
@@ -177,7 +144,6 @@ input[type="password"] {
     font-size: 1rem;
     transition: border-color 0.3s;
 }
-/*Button Style*/
 .button{
     display: inline-block;
     text-decoration: none;
@@ -198,6 +164,18 @@ input[type="password"] {
 .button:active{
     background-color: #b2b413;
 }
+form p {
+    margin-top: 20px;
+    text-align: center;
+}
+form a {
+    color: #63b3ed;
+    text-decoration: none;
+}
+form a:hover {
+    text-decoration: underline;
+}
+
 /*Footer*/
 .footer {
     display: flex;
@@ -276,14 +254,5 @@ input[type="password"] {
         top: 0;
         left: 0;
         z-index: 9;
-    }
-    .container {
-        flex-direction: column;
-    }
-    #left, #right {
-        max-width: none;
-    }
-    .heading{
-        font-size: 1.5rem;
     }
 }

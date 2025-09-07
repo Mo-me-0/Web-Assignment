@@ -1,0 +1,83 @@
+<!Doctype html>
+<html lang="am">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ይግቡ</title>
+        <link rel="stylesheet" href="CSS/login.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <header class="header">
+            <input type="checkbox" id="check">
+            <label for="check" class="icons" aria-label="Toggle Navigation">
+                <i class='bx bx-menu' id="menu-icon"></i>
+                <i class='bx bx-x' id="close-icon"></i>
+                <div id="overlay"></div>
+            </label>
+            <a class="logo" href="index.html" aria-label="ዜማ Home">
+                <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
+            </a>
+            <nav class="navbar">
+                <a href="dashboard.html" style="--i:0">ዋና ገፅ</a>
+                <a href="about.html" style="--i:1">ስለዜማ</a>
+                <a href="contact.html" style="--i:2">አድራሻ</a>
+            </nav>
+            <div></div>
+        </header>
+
+        <main>
+            <section class="container">
+                <form id="login-form">
+                    <h1 class="heading">ይግቡ</h1>
+                    <p class="message" id="login-message"></p>
+                    <div>
+                        <label for="login-email" class="text">ኢሜል:</label>
+                        <input type="email" id="login-email" placeholder="ኢሜሎን ያስገቡ" required>
+                    </div>
+                    <div>
+                        <label for="login-password" class="text">የይለፍ ቃል:</label>
+                        <input type="password" id="login-password" placeholder="የይለፍ ቃሎን ያስገቡ" required>
+                    </div>
+                    <button type="submit" class="button">ይግቡ</button>
+                    <p class="text">
+                        አካውንት የለዎትም? <a href="#" id="show-register">ይመዝገቡ</a>
+                    </p>
+                </form>
+
+                <form id="register-form" style="display: none;">
+                    <h1 class="heading">ይመዝገቡ</h1>
+                    <p class="message" id="register-message"></p>
+                    <div>
+                        <label for="register-name" class="text">ሙሉ ስም:</label>
+                        <input type="text" id="register-name" placeholder="ሙሉ ስሞን ያስገቡ" required>
+                    </div>
+                    <div>
+                        <label for="register-email" class="text">ኢሜል:</label>
+                        <input type="email" id="register-email" placeholder="ኢሜሎን ያስገቡ" required>
+                    </div>
+                    <div>
+                        <label for="register-password" class="text">የይለፍ ቃል:</label>
+                        <input type="password" id="register-password" placeholder="የይለፍ ቃሎን ያስገቡ" maxlength="12" required>
+                    </div>
+                    <button type="submit" class="button">ይመዝገቡ</button>
+                    <p class="text">
+                        አካውንት አለዎት? <a href="#" id="show-login">ይግቡ</a>
+                    </p>
+                </form>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
+            <div class="links">
+                <a href="#">የአገልግሎት ውል</a>
+                <a href="about.html">ስለዜማ</a>
+                <a href="contact.html">አድራሻ</a>
+            </div>
+            <span>&copy; 2025 Zema Audio Streaming Website</span>
+        </footer>
+
+        <script src="login.js"></script>
+    </body>
+</html>
