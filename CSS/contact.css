@@ -52,23 +52,22 @@ body{
 .logo{
     height: 40px;
 }
-.login-button{
+/*Profile*/
+.profile-ico {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
     background-color: #f2fc24;
-    width: 80px;
-    height: 30px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
     text-align: center;
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    transition: .5s;
+    text-decoration: none;
+    color: #000;
 }
-.login-button:hover{
-    background-color: #d2db1e;
-}
-.login-button:active{
+.profile-ico:hover{
     background-color: #b2b413;
 }
+/*Navigation Bar*/
 .navbar a{
     font-size: 1.15rem;
     color: #fff;
