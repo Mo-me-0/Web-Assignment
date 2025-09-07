@@ -23,98 +23,85 @@
                 <a href="about.html" style="--i:1">ስለዜማ</a>
                 <a href="contact.html" style="--i:2">አድራሻ</a>
             </nav>
-            <form class="search-bar" action="search.html" method="get">
-                <label for="search-input" aria-label="ይፈልጉ"></label>
-                <input type="text" id="search-input" placeholder="ይፈልጉ" name="ፍለጋ">
-            </form>
+                <form class="search-bar"action="search.html" method="get">
+                    <label for="search-input" aria-label="ይፈልጉ"></label>
+                    <input type="text" id="search-input" placeholder="ይፈልጉ" name="query">
+                </form>
             <a class="profile-ico" href="profile.html" aria-label="መገለጫ">
                 <i class='bx bxs-user'></i>
             </a>
         </header>
+
         <main>
             <section class="top-section">
-                    <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="ጥቁር ሰው አልበም">
-                    <div class="text">
-                        <h1>ጥቁር ሰው</h1>
-                        <h2>ቴዲ አፍሮ</h2>                    
-                    </div>
+                <div class="top-img">
+                    <img id="album-image" src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልበም ምስል">
+                </div>
+                <div class="top-details">
+                    <h1 id="album-title">አልበም</h1>
+                    <h2 id="artist-name">የአርቲስት ስም</h2>
+                </div>
             </section>
             <section class="list-wrapper">
                 <h2>ሙዚቃዎች</h2>
-                <table class="playlist" role="presentation">
-                    <tr class="song">
-                        <td class="img">
-                            <img src="Assets/Images/ጥቁር ሰው.jpg" alt="ጥቁር ሰው ሙዚቃ">
-                        </td>
-                        <td class="title">
-                            <h3>ጥቁር ሰው</h3>
-                        </td>
-                        <td class="length">
-                            <h3>9:00</h3>
-                        </td>
-                        <td class="heart-ico">
-                            <i class='bx bx-heart' aria-label="Add to favorites"></i>
-                        </td>
-                    </tr>
-                    <tr class="song">
-                        <td class="img">
-                            <img src="Assets/Images/ጥቁር ሰው.jpg" alt="ጥቁር ሰው ሙዚቃ">
-                        </td>
-                        <td class="title">
-                            <h3>ጥቁር ሰው</h3>
-                        </td>
-                        <td class="length">
-                            <h3>9:00</h3>
-                        </td>
-                        <td class="heart-ico">
-                            <i class='bx bx-heart' aria-label="Add to favorites"></i>
-                        </td>
-                    </tr>
-                    <tr class="song">
-                        <td class="img">
-                            <img src="Assets/Images/ጥቁር ሰው.jpg" alt="ጥቁር ሰው ሙዚቃ">
-                        </td>
-                        <td class="title">
-                            <h3>ጥቁር ሰው</h3>
-                        </td>
-                        <td class="length">
-                            <h3>9:00</h3>
-                        </td>
-                        <td class="heart-ico">
-                            <i class='bx bx-heart' aria-label="Add to favorites"></i>
-                        </td>
-                    </tr>
-                    <tr class="song">
-                        <td class="img">
-                            <img src="Assets/Images/ጥቁር ሰው.jpg" alt="ጥቁር ሰው ሙዚቃ">
-                        </td>
-                        <td class="title">
-                            <h3>ጥቁር ሰው</h3>
-                        </td>
-                        <td class="length">
-                            <h3>9:00</h3>
-                        </td>
-                        <td class="heart-ico">
-                            <i class='bx bx-heart' aria-label="Add to favorites"></i>
-                        </td>
-                    </tr>
-                    <tr class="song">
-                        <td class="img">
-                            <img src="Assets/Images/ጥቁር ሰው.jpg" alt="ጥቁር ሰው ሙዚቃ">
-                        </td>
-                        <td class="title">
-                            <h3>ጥቁር ሰው</h3>
-                        </td>
-                        <td class="length">
-                            <h3>9:00</h3>
-                        </td>
-                        <td class="heart-ico">
-                            <i class='bx bx-heart' aria-label="Add to favorites"></i>
-                        </td>
-                    </tr>
-                </table>
+                <div class="playlist-section">
+                    <table class="playlist" id="playlist-table">
+                        </table>
+                </div>
             </section>
         </main>
+        
+        <div class="player-container">
+            <div class="player-display">
+                <header class="player-header">
+                    <button class="player-ico" onclick="toggleDisplay()" aria-label="Toggle music display">
+                        <i class='bx bxs-chevron-down'></i>
+                    </button>
+                    <form class="search-bar" action="search.html" method="get">
+                        <label for="player-search-input" aria-label="ይፈልጉ"></label>
+                        <input type="text" id="player-search-input" placeholder="ይፈልጉ" name="query">
+                    </form>
+                </header>
+                <div class="img-area">
+                    <img class="song-img" src="Assets/Images/image.png" alt="image">
+                </div>
+            </div> 
+            <div class="music-player">
+                <button class="img-button" onclick="toggleDisplay()" aria-label="Toggle music display">
+                    <img class="music-img" src="Assets/Images/image.png" alt="album image">
+                    <div class="song-details">
+                        <h2 class="title">Song Title</h2>
+                        <h3 class="artist">artist name</h3>
+                    </div>
+                </button>
+                <div class="music-control">
+                    <div class="audio-container" aria-label="Toggle music display">
+                        <div class="song-timer">
+                            <span class="current-time">0:00</span>
+                            <span class="max-duration">0:00</span>
+                        </div>
+                        <div class="progress-area">
+                            <div class="progress-bar">
+                                <audio id="song">
+                                    <source src="Web-Assignment/Assets/musics/ቴዲ አፍሮ - ጥቁር ሰው.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <button class="control-button" id="prev" onclick="prevMusic()" aria-label="previous music">
+                            <i class='bx bx-skip-previous'></i>
+                        </button>
+                        <button class="control-button" id="play-pause" onclick="playOrPause()" aria-label="play music">
+                            <i class='bx bx-pause'></i>
+                        </button>
+                        <button class="control-button" id="next" onclick="nextMusic()" aria-label="next music">
+                            <i class='bx bx-skip-next'></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer class="footer">
                 <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
@@ -125,5 +112,63 @@
                 </div>
                 <span>&copy; 2025 Zema Audio Streaming Website</span>
         </footer>
+
+        <script src="music-list.js"></script>
+        <script src="script.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const params = new URLSearchParams(window.location.search);
+                const albumName = params.get('album');
+
+                if (albumName) {
+                    // Find the album in music data
+                    const currentAlbum = allAlbums.find(album => album.albumName === decodeURIComponent(albumName));
+
+                    if (currentAlbum) {
+                        const albumTitleEl = document.getElementById('album-title');
+                        const artistNameEl = document.getElementById('artist-name');
+                        const albumImageEl = document.getElementById('album-image');
+                        const playlistTable = document.getElementById('playlist-table');
+                        const albumIndex = allAlbums.indexOf(currentAlbum);
+
+                        // Update album details in the top section
+                        albumTitleEl.innerText = currentAlbum.albumName;
+                        artistNameEl.innerText = currentAlbum.artist;
+                        albumImageEl.src = `./Assets/Images/${currentAlbum.albumArt}`;
+                        
+                        // Clear any existing rows and fill the table with specified tracks
+                        playlistTable.innerHTML = '';
+                        currentAlbum.tracks.forEach((track, songIndex) => {
+                            const songRow = document.createElement('tr');
+                            songRow.className = 'song';
+                            songRow.innerHTML = `
+                                <td class="img">
+                                    <img src="Assets/Images/${currentAlbum.albumArt}" alt="${track.name} album art">
+                                </td>
+                                <td class="title">
+                                    <h3>${track.name}</h3>
+                                </td>
+                                <td class="length">
+                                    <h3>${track.duration}</h3> </td>
+                                <td class="heart-ico">
+                                    <i class='bx bx-heart' aria-label="Add to favorites"></i>
+                                </td>
+                            `;
+                            // Set up the click event to play the specific song
+                            songRow.addEventListener('click', () => {
+                                window.playSpecificMusic(albumIndex, songIndex);
+                            });
+                            playlistTable.appendChild(songRow);
+                        });
+                    } else {
+                        // Handle case where album is not found
+                        document.querySelector('main').innerHTML = `<p style="text-align: center; color: white;">Album not found.</p>`;
+                    }
+                } else {
+                    // Handle case where no album is specified in the URL
+                    document.querySelector('main').innerHTML = `<p style="text-align: center; color: white;">Please select an album to view.</p>`;
+                }
+            });
+        </script>
     </body>
 </html>

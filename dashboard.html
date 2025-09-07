@@ -23,9 +23,9 @@
                 <a href="about.html" style="--i:1">ስለዜማ</a>
                 <a href="contact.html" style="--i:2">አድራሻ</a>
             </nav>
-            <form class="search-bar" action="search.html" method="get">
+            <form class="search-bar"action="search.html" method="get">
                 <label for="search-input" aria-label="ይፈልጉ"></label>
-                <input type="text" id="search-input" placeholder="ይፈልጉ" name="ፍለጋ">
+                <input type="text" id="search-input" placeholder="ይፈልጉ" name="query">
             </form>
             <a class="profile-ico" href="profile.html" aria-label="መገለጫ">
                 <i class='bx bxs-user'></i>
@@ -59,40 +59,7 @@
                             <a href="#" aria-label="Next Music"><i class='bx bx-chevron-right'></i></a>
                         </div>
                     </div>
-                    <div class="elements">
-                        <a onclick="playMusic()" class="element">
-                            <img src="Assets/Images/ጥቁር ሰው.jpg" alt="ሙዚቃ ጥቁር ሰው">
-                            <div class="play-ico">
-                                <i class='bx bx-play'></i>
-                            </div>
-                            <h3 class="title">ጥቁር ሰው</h3>
-                            <p>ቴዲ አፍሮ</p>
-                        </a>
-                        <a onclick="playMusic()" class="element">
-                            <img src="Assets/Images/ጥቁር ሰው.jpg" alt="ሙዚቃ ጥቁር ሰው">
-                            <div class="play-ico">
-                                <i class='bx bx-play'></i>
-                            </div>
-                            <h3 class="title">ጥቁር ሰው</h3>
-                            <p>ቴዲ አፍሮ</p>
-                        </a>
-                        <a onclick="playMusic()" class="element">
-                            <img src="Assets/Images/ጥቁር ሰው.jpg" alt="ሙዚቃ ጥቁር ሰው">
-                            <div class="play-ico">
-                                <i class='bx bx-play'></i>
-                            </div>
-                            <h3 class="title">ጥቁር ሰው</h3>
-                            <p>ቴዲ አፍሮ</p>
-                        </a>
-                        <a onclick="playMusic()" class="element">
-                            <img src="Assets/Images/ጥቁር ሰው.jpg" alt="ሙዚቃ ጥቁር ሰው">
-                            <div class="play-ico">
-                                <i class='bx bx-play'></i>
-                            </div>
-                            <h3 class="title">ጥቁር ሰው</h3>
-                            <p>ቴዲ አፍሮ</p>
-                        </a>
-                    </div>
+                    <div class="elements" id="music-list"></div>
                 </div>
                 <div class="category">
                     <div class="headding-container">
@@ -102,58 +69,8 @@
                             <a href="#" aria-label="Next Album"><i class='bx bx-chevron-right'></i></a>
                         </div>
                     </div>
-                    <div class="elements">
-                        <a href="playlist.html" class="element">
-                            <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልበም ጥቁር ሰው">
-                            <div class="play-ico">
-                                <i class='bx bx-play'></i>
-                            </div>
-                            <h3 class="title">ጥቁር ሰው</h3>
-                            <p>ቴዲ አፍሮ</p>
-                        </a>
-                        <a href="playlist.html" class="element">
-                            <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልበም ጥቁር ሰው">
-                            <div class="play-ico">
-                                <i class='bx bx-play'></i>
-                            </div>
-                            <h3 class="title">ጥቁር ሰው</h3>
-                            <p>ቴዲ አፍሮ</p>
-                        </a>
-                        <a href="playlist.html" class="element">
-                            <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልበም ጥቁር ሰው">
-                            <div class="play-ico">
-                                <i class='bx bx-play'></i>
-                            </div>
-                            <h3 class="title">ጥቁር ሰው</h3>
-                            <p>ቴዲ አፍሮ</p>
-                        </a>
-                        <a href="playlist.html" class="element">
-                            <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልበም ጥቁር ሰው">
-                            <div class="play-ico">
-                                <i class='bx bx-play'></i>
-                            </div>
-                            <h3 class="title">ጥቁር ሰው</h3>
-                            <p>ቴዲ አፍሮ</p>
-                        </a>
-                        <a href="playlist.html" class="element">
-                            <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልበም ጥቁር ሰው">
-                            <div class="play-ico">
-                                <i class='bx bx-play'></i>
-                            </div>
-                            <h3 class="title">ጥቁር ሰው</h3>
-                            <p>ቴዲ አፍሮ</p>
-                        </a>
-                        <a href="playlist.html" class="element">
-                            <img src="Assets/Images/ቴዲ አፍሮ-ጥቁር ሰው.jpg" alt="አልበም ጥቁር ሰው">
-                            <div class="play-ico">
-                                <i class='bx bx-play'></i>
-                            </div>
-                            <h3 class="title">ጥቁር ሰው</h3>
-                            <p>ቴዲ አፍሮ</p>
-                        </a>
-                    </div>
+                    <div class="elements" id="album-list"></div>
                 </div>
-
                 <div class="category">
                     <div class="headding-container">
                         <h2>አርቲስቶች</h2>
@@ -163,32 +80,30 @@
                         </div>
                     </div>
                     <div class="elements">
-                        <a href="artist.html" class="artist-element">
+                        <a href="artist.html?artist=ቴዲ አፍሮ" class="artist-element">
                             <img src="Assets/Images/ቴዲ አፍሮ.jpeg" alt="ቴዲ አፍሮ">
                             <h3 class="title">ቴዲ አፍሮ</h3>
                         </a>
-                        <a href="artist.html" class="artist-element">
-                            <img src="Assets/Images/ቴዲ አፍሮ.jpeg" alt="ቴዲ አፍሮ">
-                            <h3 class="title">ቴዲ አፍሮ</h3>
-                        </a>
-                        <a href="artist.html" class="artist-element">
-                            <img src="Assets/Images/ቴዲ አፍሮ.jpeg" alt="ቴዲ አፍሮ">
-                            <h3 class="title">ቴዲ አፍሮ</h3>
+                        <a href="artist.html?artist=አስቴር አወቀ" class="artist-element">
+                            <img src="Assets/Images/አስቴር አወቀ.jpeg" alt="አስቴር አወቀ">
+                            <h3 class="title">አስቴር አወቀ</h3>
                         </a>
                     </div>
                 </div>
             </section>
         </main>
 
+        <!--Music Player-->
         <div class="player-container">
             <div class="player-display">
                 <header class="player-header">
                     <button class="player-ico" onclick="toggleDisplay()" aria-label="Toggle music display">
                         <i class='bx bxs-chevron-down'></i>
                     </button>
-                    <button class="player-ico">
-                        <i class='bx bx-menu'></i>
-                    </button>
+                    <form class="search-bar" action="search.html" method="get">
+                        <label for="player-search-input" aria-label="ይፈልጉ"></label>
+                        <input type="text" id="player-search-input" placeholder="ይፈልጉ" name="query">
+                    </form>
                 </header>
                 <div class="img-area">
                     <img class="song-img" src="Assets/Images/image.png" alt="image">
@@ -231,6 +146,7 @@
             </div>
         </div>
 
+        <!--Footer Section-->>
         <footer class="footer">
                 <img class="logo" src="Assets/Images/zema-icon.png" alt="zema icon">
                 <div class="links">
@@ -241,10 +157,66 @@
                 <span>&copy; 2025 Zema Audio Streaming Website</span>
         </footer>
         
-        <!--The music data-->
         <script src="music-list.js"></script>
-        <!--The music data-->
-        <script src="script.js"></script>
+        <script src="player.js"></script>
 
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const musicListContainer = document.getElementById('music-list');
+                const albumListContainer = document.getElementById('album-list');
+
+                // Function to render all music tracks
+                function renderMusic() {
+                    musicListContainer.innerHTML = '';
+                    allAlbums.forEach((album, albumIndex) => {  
+                        const track = album.tracks[0];
+                        const musicElement = document.createElement('a');
+                        musicElement.className = 'element';
+                        musicElement.innerHTML = `
+                            <img src="Assets/Images/${album.albumArt}" alt="ሙዚቃ ${track.name}">
+                            <div class="play-ico">
+                                <i class='bx bx-play'></i>
+                            </div>
+                            <h3 class="title">${track.name}</h3>
+                            <p>${album.artist}</p>
+                        `;
+                        // The click event to play this specific track
+                        musicElement.addEventListener('click', () => {
+                            playSpecificMusic(albumIndex, 0);
+                        });
+                        musicListContainer.appendChild(musicElement);
+                    });
+                }
+
+                // Function to render all albums
+                function renderAlbums() {
+                    albumListContainer.innerHTML = '';
+                    allAlbums.forEach((album, albumIndex) => {
+                        const albumElement = document.createElement('a');
+                        albumElement.className = 'element';
+                        // Pass the album name to a URL query parameter
+                        albumElement.href = `playlist.html?album=${encodeURIComponent(album.albumName)}`;
+                        albumElement.innerHTML = `
+                            <img src="Assets/Images/${album.albumArt}" alt="አልበም ${album.albumName}">
+                            <div class="play-ico">
+                                <i class='bx bx-play'></i>
+                            </div>
+                            <h3 class="title">${album.albumName}</h3>
+                            <p>${album.artist}</p>
+                        `;
+
+                        albumElement.querySelector('.play-ico').addEventListener('click', (e) => {
+                            e.preventDefault();
+                            playSpecificMusic(albumIndex, 0);
+                        });
+                        albumListContainer.appendChild(albumElement);
+                    });
+                }
+
+                renderMusic();
+                renderAlbums();
+            });
+
+        </script>
     </body>
 </html>

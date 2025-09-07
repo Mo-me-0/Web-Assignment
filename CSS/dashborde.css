@@ -132,7 +132,7 @@ body{
 }
 .carousel-nav{
     display: flex;
-    column-gap: 60px;
+    column-gap: 40px;
     position: absolute;
     bottom: -50px;
     left: 50%;
@@ -232,6 +232,7 @@ body{
 }
 .artist-element img{
     width: 100%;
+    aspect-ratio: 1;
     border-radius: 50%;
     margin-bottom: 10px;
 }
@@ -259,7 +260,7 @@ body{
     position: fixed;
     width: 100%;
     top: 0;
-    height: 75%;
+    height: 80%;
     background-color: #2d3748;
     transition: all .5s ease;
 }
@@ -290,9 +291,9 @@ body{
     border-radius: 50%;
 }
 .music-player{
-    padding-top: 20px;
     width: 100%;
-    height: 25%;
+    height: 22%;
+    border-top: 1px solid #fff;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -302,7 +303,9 @@ body{
 }
 .music-player .img-button{
     border: none;
-    height: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
     background-color: transparent;
 }
 .img-button .music-img{
@@ -325,7 +328,7 @@ body{
     padding: 10px 0 20px 0;
 }
 .audio-container{
-    margin: 20px;
+    margin: 8px;
 }
 .song-timer{
     margin-bottom: 20px;
@@ -500,6 +503,7 @@ body{
     /*music player section*/
     .music-player{
         padding-top: 10px;
+        height: 20%;
     }
     .song-details .title{
     font-size: 1rem;
@@ -532,7 +536,7 @@ body{
     }
     .music-player .img-button{
         margin: 0 10px;
-        height: 3rem;
+        flex-direction: column;
     }
     .img-button .music-img{
         width: 3rem;
