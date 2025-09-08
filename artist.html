@@ -47,8 +47,8 @@
                     <div class="headding-container">
                         <h2>አልበሞች</h2>
                         <div class="scroll">
-                            <a href="#" aria-label="Previous album"><i class='bx bx-chevron-left'></i></a>
-                            <a href="#" aria-label="Next album"><i class='bx bx-chevron-right'></i></a>
+                            <button id="scrollLeftBtn" onclick="scrollBack('artist-albums')" aria-label="scroll left"><i class='bx bx-chevron-left'></i></button>
+                            <button id="scrollRightBtn" onclick="scrollRight('artist-albums')" aria-label="sroll right"><i class='bx bx-chevron-right'></i></button>
                         </div>
                     </div>
                     <div class="elements" id="artist-albums"></div>
@@ -56,10 +56,6 @@
                 <div class="category">
                     <div class="headding-container">
                         <h2>ሙዚቃዎች</h2>
-                        <div class="scroll">
-                            <a href="#" aria-label="Previous music"><i class='bx bx-chevron-left'></i></a>
-                            <a href="#" aria-label="Next music"><i class='bx bx-chevron-right'></i></a>
-                        </div>
                     </div>
                     <table class="playlist" id="artist-musics"></table>
                 </div>

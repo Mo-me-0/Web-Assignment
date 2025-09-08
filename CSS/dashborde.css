@@ -165,8 +165,9 @@ body{
     color: #fff;
     margin-bottom: 20px;
 }
-.scroll a{
-    text-decoration: none;
+.scroll button{
+    background-color: transparent;
+    border: none;
     color: #fff;
     font-size: 1.4rem;
 }
@@ -219,6 +220,9 @@ body{
 .element:hover .play-ico .bx{
     opacity: 0.8;
     transform: translateY(-30px);
+}
+.element:active{
+        text-decoration: none;
 }
 /*Element for Artists Category*/
 .artist-element{

@@ -55,19 +55,20 @@ function loadMusic(albumIdx, songIdx) {
     musicArtist.innerText = currentAlbum.artist;
     musicImg.src = buttonImg.src = `./Assets/Images/${currentAlbum.albumArt}`;
     mainAudio.src = `./Assets/musics/${currentSong.src}`;
+    saveToHistory(albumIdx, songIdx);
 }
 
 // Function to play music
 function playMusic() {
     playerContainer.style.visibility = "visible";
-    playerContainer.classList.add("paused");
+    playerContainer.classList.add("playing");
     playPause.innerHTML = "<i class='bx bx-pause'></i>";
     mainAudio.play();
 }
 
 // Function to pause music
 function pauseMusic() {
-    playerContainer.classList.remove("paused");
+    playerContainer.classList.remove("playing");
     playPause.innerHTML = "<i class='bx bx-play'></i>";
     mainAudio.pause();
 }
@@ -102,7 +103,7 @@ function nextMusic() {
 
 // Toggles between play and pause
 function playOrPause() {
-    const isMusicPlaying = playerContainer.classList.contains("paused");
+    const isMusicPlaying = playerContainer.classList.contains("playing");
     isMusicPlaying ? pauseMusic() : playMusic();
 }
 
@@ -156,4 +157,47 @@ function toggleDisplay() {
         playerDisplay.style.transform = "translateY(0)";
         playerDisplay.style.opacity = "1";
     }
+}
+// Scrolls the given container to the right by its full width
+function scrollRight(container) {
+    container = document.getElementById(container);
+    container.scrollBy({
+        left: container.offsetWidth,
+        behavior: 'smooth'
+    });
+}
+// Scrolls the given container to the left by its full width
+function scrollBack(container) {
+    container = document.getElementById(container);
+    container.scrollBy({
+        left: -container.offsetWidth,
+        behavior: 'smooth'
+    });
+}
+// Function to save the current song to history
+function saveToHistory(albumIdx, songIdx) {
+    const history = JSON.parse(localStorage.getItem('musicHistory')) || [];
+    const currentSong = {
+        albumIndex: albumIdx,
+        songIndex: songIdx,
+        name: allAlbums[albumIdx].tracks[songIdx].name,
+        artist: allAlbums[albumIdx].artist,
+        albumArt: allAlbums[albumIdx].albumArt
+    };
+
+    // Prevent duplicates and keep the list at a reasonable length
+    const existingIndex = history.findIndex(item => item.name === currentSong.name && item.artist === currentSong.artist);
+    if (existingIndex !== -1) {
+        history.splice(existingIndex, 1);
+    }
+    
+    // Add the new song to the top of the history list
+    history.unshift(currentSong);
+
+    // Limit the history to the last 20 songs
+    if (history.length > 20) {
+        history.pop();
+    }
+    
+    localStorage.setItem('musicHistory', JSON.stringify(history));
 }

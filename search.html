@@ -121,9 +121,8 @@
                         const album = result.album;
                         const track = result.track;
 
-                        const musicElement = document.createElement('a');
+                        const musicElement = document.createElement('div');
                         musicElement.className = 'element';
-                        musicElement.href = '#'; 
                         musicElement.innerHTML = `
                             <img src="Assets/Images/${album.albumArt}" alt="አልበም ${album.albumName}">
                             <div class="play-ico">
@@ -143,7 +142,7 @@
                 }
 
                 function performSearch(query) {
-                    const trimmedQuery = query.toLowerCase().trim();
+                    const trimmedQuery = query.trim();
 
                     if (trimmedQuery === "") {
                         searchStatus.innerText = "የአርቲስቶችን ወይም የአልበም ስሞችን ይፈልጉ";
@@ -153,11 +152,11 @@
 
                     const foundResults = [];
                     allAlbums.forEach((album, albumIndex) => {
-                        const albumMatch = album.albumName.toLowerCase().includes(trimmedQuery);
-                        const artistMatch = album.artist.toLowerCase().includes(trimmedQuery);
+                        const albumMatch = album.albumName.includes(trimmedQuery);
+                        const artistMatch = album.artist.includes(trimmedQuery);
                         
                         album.tracks.forEach((track, songIndex) => {
-                            const trackMatch = track.name.toLowerCase().includes(trimmedQuery);
+                            const trackMatch = track.name.includes(trimmedQuery);
 
                             if (albumMatch || artistMatch || trackMatch) {
                                 foundResults.push({ album, albumIndex, track, songIndex });

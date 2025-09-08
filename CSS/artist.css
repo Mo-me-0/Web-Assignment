@@ -121,8 +121,9 @@ body{
     color: #fff;
     margin-bottom: 20px;
 }
-.scroll a{
-    text-decoration: none;
+.scroll button{
+    background-color: transparent;
+    border: none;
     color: #fff;
     font-size: 1.4rem;
 }

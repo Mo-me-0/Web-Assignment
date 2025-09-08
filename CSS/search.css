@@ -193,11 +193,6 @@ main{
     color: #fff;
     margin-bottom: 20px;
 }
-.scroll a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.4rem;
-}
 .elements{
     display: flex;
     flex-wrap: wrap;

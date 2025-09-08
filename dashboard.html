@@ -55,8 +55,8 @@
                     <div class="headding-container">
                         <h2>ሙዚቃዎች</h2>
                         <div class="scroll">
-                            <a href="#" aria-label="Previous Music"><i class='bx bx-chevron-left'></i></a>
-                            <a href="#" aria-label="Next Music"><i class='bx bx-chevron-right'></i></a>
+                            <button id="scrollLeftBtn" onclick="scrollBack('music-list')" aria-label="scroll left"><i class='bx bx-chevron-left'></i></button>
+                            <button id="scrollRightBtn" onclick="scrollRight('music-list')" aria-label="sroll right"><i class='bx bx-chevron-right'></i></button>
                         </div>
                     </div>
                     <div class="elements" id="music-list"></div>
@@ -65,8 +65,8 @@
                     <div class="headding-container">
                         <h2>አልበሞች</h2>
                         <div class="scroll">
-                            <a href="#" aria-label="Previous Album"><i class='bx bx-chevron-left'></i></a>
-                            <a href="#" aria-label="Next Album"><i class='bx bx-chevron-right'></i></a>
+                            <button id="scrollLeftBtn" onclick="scrollBack('album-list')" aria-label="scroll left"><i class='bx bx-chevron-left'></i></button>
+                            <button id="scrollRightBtn" onclick="scrollRight('album-list')" aria-label="sroll right"><i class='bx bx-chevron-right'></i></button>
                         </div>
                     </div>
                     <div class="elements" id="album-list"></div>
@@ -75,11 +75,11 @@
                     <div class="headding-container">
                         <h2>አርቲስቶች</h2>
                         <div class="scroll">
-                            <a href="#" aria-label="Previous Music"><i class='bx bx-chevron-left'></i></a>
-                            <a href="#" aria-label="Next Music"><i class='bx bx-chevron-right'></i></a>
+                            <button id="scrollLeftBtn" onclick="scrollBack('artist-list')" aria-label="scroll left"><i class='bx bx-chevron-left'></i></button>
+                            <button id="scrollRightBtn" onclick="scrollRight('artist-list')" aria-label="sroll right"><i class='bx bx-chevron-right'></i></button>
                         </div>
                     </div>
-                    <div class="elements">
+                    <div class="elements" id="artist-list">
                         <a href="artist.html?artist=ቴዲ አፍሮ" class="artist-element">
                             <img src="Assets/Images/ቴዲ አፍሮ.jpeg" alt="ቴዲ አፍሮ">
                             <h3 class="title">ቴዲ አፍሮ</h3>
@@ -167,24 +167,29 @@
 
                 // Function to render all music tracks
                 function renderMusic() {
+                    // Clear the current list
                     musicListContainer.innerHTML = '';
-                    allAlbums.forEach((album, albumIndex) => {  
-                        const track = album.tracks[0];
-                        const musicElement = document.createElement('a');
-                        musicElement.className = 'element';
-                        musicElement.innerHTML = `
-                            <img src="Assets/Images/${album.albumArt}" alt="ሙዚቃ ${track.name}">
-                            <div class="play-ico">
-                                <i class='bx bx-play'></i>
-                            </div>
-                            <h3 class="title">${track.name}</h3>
-                            <p>${album.artist}</p>
-                        `;
-                        // The click event to play this specific track
-                        musicElement.addEventListener('click', () => {
-                            playSpecificMusic(albumIndex, 0);
+                    
+                    // Loop through each album
+                    allAlbums.forEach((album, albumIndex) => {
+                        // Loop through each track within the current album
+                        album.tracks.forEach((track, songIndex) => {
+                            const musicElement = document.createElement('div');
+                            musicElement.className = 'element';
+                            musicElement.innerHTML = `
+                                <img src="Assets/Images/${album.albumArt}" alt="ሙዚቃ ${track.name}">
+                                <div class="play-ico">
+                                    <i class='bx bx-play'></i>
+                                </div>
+                                <h3 class="title">${track.name}</h3>
+                                <p>${album.artist}</p>
+                            `;
+                            // The click event to play this specific track
+                            musicElement.addEventListener('click', () => {
+                                playSpecificMusic(albumIndex, songIndex);
+                            });
+                            musicListContainer.appendChild(musicElement);
                         });
-                        musicListContainer.appendChild(musicElement);
                     });
                 }
 
@@ -204,11 +209,6 @@
                             <h3 class="title">${album.albumName}</h3>
                             <p>${album.artist}</p>
                         `;
-
-                        albumElement.querySelector('.play-ico').addEventListener('click', (e) => {
-                            e.preventDefault();
-                            playSpecificMusic(albumIndex, 0);
-                        });
                         albumListContainer.appendChild(albumElement);
                     });
                 }

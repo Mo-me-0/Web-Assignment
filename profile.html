@@ -27,37 +27,49 @@
         </header>
 
         <main>
-            <section class="container">
-                <section id="left">
-                    <h1 class="heading">መገለጫ</h1>
-                    <div class="profile-ico" href="profile.html">
-                        <i class='bx bxs-user'></i>
-                    </div>
-                    <div class="profile-details">
-                        <p class="text">ስም: <span id="display-name"></span></p>
-                        <p class="text">ኢሜል: <span id="display-email"></span></p>
+            <div class="container-nav">
+                <a href="#profile-section">መገለጫ</a>
+                <a href="#history-section">የተጫወቱ ሙዚቃዎች</a>
+            </div>
+            <div class="container">
+                <section id="profile-section" class="profile-container">
+                    <section id="left">
+                        <div class="profile-ico" href="profile.html">
+                            <i class='bx bxs-user'></i>
+                        </div>
+                        <div class="profile-details">
+                            <p class="text">ስም: <span id="display-name"></span></p>
+                            <p class="text">ኢሜል: <span id="display-email"></span></p>
+                        </div>
+                    </section>
+                    <section>
+                        <form id="right">
+                            <h2 class="heading">መረጃ ቀይር</h2>
+                            <p class="message" id="update-message"></p>
+                            <div>
+                                <label for="name-input" class="text">ስም:</label>
+                                <input type="text" id="name-input" placeholder="ስሞን ይፃፉ" name="name" required>
+                            </div>
+                            <div>
+                                <label for="email-input" class="text">ኢሜል:</label>
+                                <input type="email" id="email-input" placeholder="ኢሜሎን ይፃፉ" name="email" required>
+                            </div>
+                            <div>
+                                <label for="password-input" class="text">የይለፍ ቃል:</label>
+                                <input type="password" id="password-input" placeholder="ይለፍ ቃሎን ያስገቡ" maxlength="12">
+                            </div>
+                            <button class="button" type="submit">አዘምን</button>
+                        </form>
+                    </section>                
+                </section>
+                <section id="history-section" class="history-container">
+                    <h2 class="heading">የተጫወቱ ሙዚቃዎች</h2>
+                    <div id="history-list" class="song-list">
+                        <p id="no-history">እስካሁን ምንም ሙዚቃ አላዳመጡም።</p>
                     </div>
                 </section>
-                <section>
-                    <form id="right">
-                        <h2 class="heading">መረጃ ቀይር</h2>
-                        <p class="message" id="update-message"></p>
-                        <div>
-                            <label for="name-input" class="text">ስም:</label>
-                            <input type="text" id="name-input" placeholder="ስሞን ይፃፉ" name="name" required>
-                        </div>
-                        <div>
-                            <label for="email-input" class="text">ኢሜል:</label>
-                            <input type="email" id="email-input" placeholder="ኢሜሎን ይፃፉ" name="email" required>
-                        </div>
-                        <div>
-                            <label for="password-input" class="text">የይለፍ ቃል:</label>
-                            <input type="password" id="password-input" placeholder="ይለፍ ቃሎን ያስገቡ" maxlength="12">
-                        </div>
-                        <button class="button" type="submit">አዘምን</button>
-                    </form>
-                </section>                
-            </section>
+            </div>
+
         </main>
         
         <footer class="footer">
@@ -140,7 +152,40 @@
                     localStorage.removeItem('currentUser');
                     window.location.href = 'login.html';
                 });
+
+                const historyList = document.getElementById('history-list');
+                const noHistoryMessage = document.getElementById('no-history');
+
+                // Function to render the music history
+                function renderHistory() {
+                    const history = JSON.parse(localStorage.getItem(`musicHistory`)) || [];
+                    
+                    if (history.length === 0) {
+                        noHistoryMessage.style.display = 'block';
+                        return;
+                    }
+
+                    noHistoryMessage.style.display = 'none';
+                    
+                    historyList.innerHTML = '';
+                    
+                    history.forEach(item => {
+                        const historyItem = document.createElement('div');
+                        historyItem.className = 'history-item';
+                        historyItem.innerHTML = `
+                            <img src="./Assets/Images/${item.albumArt}" alt="${item.name} album art">
+                            <div class="details">
+                                <div class="title">${item.name}</div>
+                                <div class="artist">${item.artist}</div>
+                            </div>
+                        `;
+                        historyList.appendChild(historyItem);
+                    });
+                }
+
+                renderHistory();
             });
+
         </script>
     </body>
 </html>
