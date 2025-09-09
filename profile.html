@@ -118,11 +118,12 @@
                         const updatedUser = { ...users[userIndex] };
                         if (newName) updatedUser.name = newName;
                         if (newEmail) {
-                            // Check if the new email already exists (for another user)
+                            // Check if the email already exists
                             const emailExists = users.some((user, index) => user.email === newEmail && index !== userIndex);
                             if (emailExists) {
                                 updateMessage.innerText = "ይህ ኢሜል ቀድሞውኑ አለ።";
                                 updateMessage.style.color = '#e53e3e';
+                                setTimeout(() => {updateMessage.innerText = ""},2000);
                                 return;
                             }
                             updatedUser.email = newEmail;
@@ -132,6 +133,7 @@
                         } else if (newPassword && newPassword.length < 6) {
                             updateMessage.innerText = "የይለፍ ቃል ቢያንስ 6 ፊደላት መሆን አለበት።";
                             updateMessage.style.color = '#e53e3e';
+                            setTimeout(() => {updateMessage.innerText = ""},2000);
                             return;
                         }
 
@@ -140,11 +142,12 @@
                         localStorage.setItem('currentUser', JSON.stringify(updatedUser));
                         updateMessage.innerText = "መረጃዎ በተሳካ ሁኔታ ተዘምኗል።";
                         updateMessage.style.color = '#48bb78';
+                        setTimeout(() => {updateMessage.innerText = ""},2000);
 
                         // Update the displayed information
                         displayName.innerText = updatedUser.name;
                         displayEmail.innerText = updatedUser.email;
-                        passwordInput.value = ''; // Clear password field for security
+                        passwordInput.value = ''; // Empty password field for security
                     }
                 });
 

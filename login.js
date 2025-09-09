@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (password.length < 6) {
             registerMessage.innerText = "የይለፍ ቃል ቢያንስ 6 ፊደላት መሆን አለበት።";
             registerMessage.style.color = '#e53e3e';
+            setTimeout(() => {registerMessage.innerText = ""},2000);
+
             return;
         }
 
@@ -41,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (userExists) {
             registerMessage.innerText = "ይህ ኢሜል ቀድሞውኑ አለ።";
             registerMessage.style.color = '#e53e3e';
+            setTimeout(() => {registerMessage.innerText = ""},2000);
             return;
         }
 
@@ -81,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             loginMessage.innerText = "የተጠቃሚ ስም ወይም የይለፍ ቃል የተሳሳተ ነው።";
             loginMessage.style.color = '#e53e3e';
+            setTimeout(() => {loginMessage.innerText = ""},2000);
         }
     });
 });
