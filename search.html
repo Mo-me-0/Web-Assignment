@@ -109,6 +109,7 @@
                 const searchResultsList = document.getElementById('search-results-list');
                 const searchStatus = document.getElementById('search-status');
 
+                //Display Search Result
                 function displayResults(results) {
                     searchResultsList.innerHTML = '';
                     if (results.length === 0) {
@@ -141,6 +142,7 @@
                     });
                 }
 
+                //Searching Method
                 function performSearch(query) {
                     const trimmedQuery = query.trim();
 
